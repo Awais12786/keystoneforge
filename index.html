@@ -1,0 +1,3446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authority by Architecture - Hero Section</title>
+
+    <!-- Adobe Fonts (Typekit) -->
+    <!-- Replace 'xxxxxx.css' with your actual Adobe Fonts Project ID -->
+    <link rel="stylesheet" href="https://use.typekit.net/xxxxxx.css">
+    
+    <!-- Fallback Google Fonts (Jost & Crimson Pro) until Typekit is active -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. Core Variables & Resets
+           ========================================================================== */
+        :root {
+            /* Brand Colors */
+            --color-parchment: #F4EFE6;
+            --color-charcoal: #20262B;
+            --color-iron: #4A5459;
+            --color-ember: #8C3B1B;
+            --color-copper: #B06A3B;
+            --color-gold: #C89B3C;
+            --color-white: #FFFFFF;
+
+            /* Typography */
+            --font-heading: 'europa', 'Jost', sans-serif;
+            --font-body: 'minion-pro', 'Crimson Pro', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-parchment);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: var(--font-body);
+            color: #111111;
+        }
+
+        /* ==========================================================================
+           Typography Overrides (as per User Request)
+           ========================================================================== */
+        
+        /* 1. Global Font Families */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading) !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+        }
+
+        p, span, div, li {
+            font-family: var(--font-body);
+        }
+
+        /* 2. Main Section Headings (46px) */
+        .hero-headline,
+        .gap-headline,
+        .blueprint-heading,
+        .book-section-heading,
+        .insights-heading,
+        .mindset-heading,
+        .testimonials-heading,
+        .cta-heading {
+            font-family: var(--font-heading) !important;
+            font-size: 46px !important;
+            line-height: 58px !important;
+        }
+
+        /* 3. Main Section Subtexts (21px) */
+        .hero-body,
+        .gap-subtext,
+        .blueprint-subtext,
+        .book-section-subtext,
+        .cta-subtext {
+            font-size: 21px !important;
+            line-height: 35px !important;
+        }
+
+        /* 4. Card Heading Hierarchy Fix (26px) */
+        .card h2, .card h3, .feature-card h3, .testimonial-card h3,
+        .gap-card h3, .audience-card h3, .book-card h3, .book-title,
+        .card-label, .audience-heading {
+            font-family: var(--font-heading) !important;
+            font-size: 26px !important;
+            line-height: 34px !important;
+        }
+
+        /* 5. Card Paragraphs & Body Copy (16px) */
+        .card p, .feature-card p, .testimonial-card p,
+        .gap-card p, .audience-card p, .book-card p, .book-desc, .t-quote {
+            font-size: 16px !important;
+            line-height: 26px !important;
+        }
+
+        /* 6. Step Headers & Small Titles (20px) */
+        .step-title, .mindset-label {
+            font-size: 20px !important;
+        }
+
+        /* 7. Sans-Serif Secondary Text & UI Elements */
+        .btn, .tag-pill, .audience-pill, .book-eyebrow, .featured-label-text, .step-circle, .header-brand-name, .header-tagline, .header-nav-links a {
+            font-family: var(--font-heading) !important;
+        }
+
+        /* Header & Footer text elements get Europa */
+        .site-header *, .site-footer * {
+            font-family: var(--font-heading) !important;
+        }
+
+        /* ==========================================================================
+           Dark Background Contrast Fixes
+           ========================================================================== */
+        
+        /* Force text colors on light backgrounds */
+        body { color: #111111; }
+        .hero-headline, .gap-headline, .audience-heading, .book-section-heading, .insights-heading, .testimonials-heading, .cta-heading { color: #111111 !important; }
+        .hero-body, .gap-subtext, .book-section-subtext, .cta-subtext, .book-desc, .t-quote { color: #111111 !important; }
+
+        /* Dark Sections Contrast Override */
+        .dark-section, 
+        .blueprint-section, 
+        .mindset-section, 
+        .site-footer {
+            color: #FFFFFF !important;
+        }
+
+        .dark-section h1, .dark-section h2, .dark-section h3,
+        .blueprint-section h2, .blueprint-section h3, .blueprint-heading,
+        .mindset-section h2, .mindset-section h3, .mindset-heading,
+        .site-footer h2, .site-footer h3, .site-footer h4, .site-footer a, .footer-col-heading {
+            color: #FFFFFF !important;
+        }
+
+        .dark-section p, .blueprint-section p, .blueprint-subtext, .mindset-section p, .site-footer p, .footer-quote-text, .footer-connect-text {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+
+        /* Footer Link Specifics */
+        .footer-nav-list a {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        .footer-nav-list a:hover {
+            color: #DCCBB4 !important;
+        }
+        .footer-cta-link {
+            color: #DCCBB4 !important;
+        }
+
+
+        /* ==========================================================================
+           2. Site Header / Navigation
+           ========================================================================== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1E3A5F 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1E3A5F 100%);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .header-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .header-brand-name {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-white);
+            letter-spacing: 0.04em;
+            line-height: 1.2;
+        }
+
+        .header-brand-tagline {
+            font-family: var(--font-heading);
+            font-size: 10px;
+            font-weight: 600;
+            color: #C89B3C;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            line-height: 1;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .header-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header-nav-links a {
+            font-family: var(--font-heading);
+            font-size: 13.5px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .header-nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #C89B3C;
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        .header-nav-links a:hover {
+            color: var(--color-white);
+        }
+
+        .header-nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .header-nav-links .has-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .header-nav-links .dropdown-arrow {
+            width: 10px;
+            height: 10px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2.5;
+            transition: transform 0.3s ease;
+        }
+
+        .header-cta {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-white);
+            background-color: var(--color-ember);
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s ease, transform 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .header-cta:hover {
+            background-color: #7a3217;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile hamburger button */
+        .header-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
+            cursor: pointer;
+            gap: 5px;
+            padding: 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .header-hamburger:hover {
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .header-hamburger span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: var(--color-white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .header-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(5px);
+        }
+        .header-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .header-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-5px);
+        }
+
+        /* Mobile overlay nav */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(32, 40, 49, 0.98);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 999;
+            padding: 40px 24px;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .mobile-nav-overlay.open {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-nav-overlay a {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            padding: 12px 0;
+            transition: color 0.3s ease;
+            letter-spacing: 0.02em;
+        }
+
+        .mobile-nav-overlay a:hover {
+            color: #C89B3C;
+        }
+
+        .mobile-nav-overlay .mobile-cta {
+            margin-top: 16px;
+            background-color: var(--color-ember);
+            color: var(--color-white);
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-nav-overlay .mobile-cta:hover {
+            background-color: #7a3217;
+        }
+
+        /* ==========================================================================
+           3. Hero Section Layout
+           ========================================================================== */
+        .hero {
+            padding: 160px 0 90px 0;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5%;
+        }
+
+        /* Left Column (55%) */
+        .hero-content {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Right Column (45%) */
+        .hero-visual {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* ==========================================================================
+           3. Typography (Left Column)
+           ========================================================================== */
+        .hero-label {
+            font-family: var(--font-heading);
+            color: var(--color-ember);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+        }
+
+        .hero-headline {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-body {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 95%;
+        }
+
+        /* ==========================================================================
+           4. CTA Buttons
+           ========================================================================== */
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--color-ember);
+            color: var(--color-white);
+            border: 2px solid var(--color-ember);
+        }
+
+        .btn-primary:hover {
+            background-color: #7a3217;
+            border-color: #7a3217;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-charcoal);
+            border: 2px solid var(--color-charcoal);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(32, 38, 43, 0.05);
+        }
+
+        /* ==========================================================================
+           5. Image & Smoky Background Texture (Right Column)
+           This is the key fix: multiple layered radial gradients create a warm,
+           smoky/atmospheric texture behind the transparent PNG portrait, so the
+           image blends naturally into the page instead of sitting on a flat box.
+           ========================================================================== */
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 520px;
+            height: 620px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            /* Smoky, painterly warm background made from layered radial gradients */
+            background-color: var(--color-parchment);
+            background-image:
+                radial-gradient(circle at 25% 25%, rgba(176, 106, 59, 0.45) 0%, transparent 55%),
+                radial-gradient(circle at 75% 15%, rgba(32, 38, 43, 0.30) 0%, transparent 50%),
+                radial-gradient(circle at 50% 75%, rgba(200, 155, 60, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 15% 80%, rgba(140, 59, 27, 0.20) 0%, transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(74, 84, 89, 0.25) 0%, transparent 50%);
+            background-size: 180% 180%;
+            background-blend-mode: multiply, screen, overlay, multiply, soft-light;
+            animation: smokeShift 18s ease-in-out infinite;
+        }
+
+        @keyframes smokeShift {
+
+            0%,
+            100% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .executive-portrait {
+            position: relative;
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            /* Transparent PNG sits directly on the smoky gradient behind it */
+            filter: drop-shadow(0 25px 35px rgba(32, 38, 43, 0.18));
+        }
+
+        /* Soft vignette fade at the very edges of the wrapper so the smoky
+           background itself fades into the page background, not a hard box edge */
+        .image-wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            box-shadow: inset 0 0 80px 40px var(--color-parchment);
+            pointer-events: none;
+        }
+
+        /* ==========================================================================
+           6. Combined "As Featured In" Section
+           ========================================================================== */
+        .featured-section {
+            width: 100%;
+            background-color: var(--color-ember);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 18px 20px;
+            overflow: hidden;
+        }
+
+        .featured-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        /* Left: static label block */
+        .featured-label-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+            padding-right: 28px;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .featured-press-icon {
+            width: 26px;
+            height: 26px;
+            flex-shrink: 0;
+            color: var(--color-gold);
+        }
+
+        .featured-label-text {
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-gold);
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        /* Right: scrolling carousel */
+        .featured-carousel-wrap {
+            flex: 1;
+            overflow: hidden;
+            min-width: 0;
+            mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+        }
+
+        .logo-carousel {
+            display: flex;
+            width: max-content;
+            align-items: center;
+            animation: logoScroll 28s linear infinite;
+        }
+
+        .logo-carousel:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes logoScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Each logo has auto width with consistent padding so text never overlaps */
+        .logo-item {
+            flex: 0 0 auto;
+            height: 44px;
+            padding: 0 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.80);
+            opacity: 1;
+            transition: color 0.3s ease;
+        }
+
+        .logo-item:hover {
+            color: var(--color-white);
+        }
+
+        /* Dot between logos */
+        .logo-sep {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--color-gold);
+            flex-shrink: 0;
+            opacity: 0.7;
+            margin: 0 2px;
+        }
+
+        /* Single unified style for all publication names */
+        .logo-name {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+
+        /* ==========================================================================
+           7. Mind the Gap Section
+           ========================================================================== */
+        .mind-the-gap {
+            background-color: var(--color-parchment);
+            padding: 90px 0 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gap-header {
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 48px;
+        }
+
+        .gap-headline {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .gap-subtext {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 17px;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .gap-cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            align-items: stretch;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .gap-card {
+            background-color: var(--color-white);
+            border: 1px solid rgba(138, 148, 155, 0.3);
+            border-radius: 8px;
+            padding: 40px;
+            height: 100%;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-label {
+            font-family: var(--font-heading);
+            color: var(--color-iron);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* Left Card - Scattered Tags */
+        .scattered-tags {
+            position: relative;
+            width: 100%;
+            flex: 1;
+            min-height: 240px;
+        }
+
+        .tag-pill {
+            position: absolute;
+            background-color: #FAFAFA;
+            border: 1px solid rgba(138, 148, 155, 0.25);
+            color: var(--color-charcoal);
+            font-family: var(--font-body);
+            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 40px;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(32, 38, 43, 0.04);
+        }
+
+        /* Organic layout positioning */
+        .tag-1 { top: 0%; left: 50%; transform: translateX(-50%); }
+        .tag-2 { top: 25%; left: 2%; }
+        .tag-3 { top: 25%; right: 2%; }
+        .tag-4 { top: 50%; left: 50%; transform: translateX(-50%); }
+        .tag-5 { top: 75%; left: 5%; }
+        .tag-6 { top: 75%; right: 5%; }
+
+        /* Right Card - Hexagon Image */
+        .radar-image-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .radar-image {
+            width: 100%;
+            max-width: 90%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Middle Arrow */
+        .gap-arrow {
+            color: var(--color-ember);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        .gap-arrow svg {
+            width: 28px;
+            height: 28px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+        }
+
+        /* ==========================================================================
+           8. Audience Segmentation Section
+           ========================================================================== */
+        .audience-segmentation {
+            background-color: var(--color-parchment);
+            padding: 30px 0 90px 0;
+        }
+
+        .audience-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        .audience-card {
+            background-color: var(--color-white);
+            border: 1px solid rgba(138, 148, 155, 0.3);
+            border-radius: 8px;
+            padding: 40px;
+            height: 100%;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .audience-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .audience-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(140, 59, 27, 0.25);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-ember);
+        }
+
+        .audience-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .audience-label {
+            font-family: var(--font-heading);
+            color: var(--color-iron);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .audience-heading {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .audience-body {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .audience-pills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .audience-pill {
+            background-color: #FAFAFA;
+            border: 1px solid rgba(138, 148, 155, 0.3);
+            border-radius: 40px;
+            padding: 10px 16px;
+            color: var(--color-charcoal);
+            font-family: var(--font-body);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* ==========================================================================
+           9. The Blueprint Section
+           ========================================================================== */
+        .blueprint-section {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1E3A5F 100%);
+            padding: 90px 0;
+            color: var(--color-white);
+            width: 100%;
+        }
+
+        .blueprint-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .blueprint-heading {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .blueprint-subtext {
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .blueprint-steps {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+        }
+
+        .blueprint-step {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .step-circle {
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--color-copper);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+
+        .step-icon {
+            color: var(--color-copper);
+            margin-bottom: 16px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .step-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .step-title {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--color-white);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .step-desc {
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 200px;
+        }
+
+        /* Dotted Connector */
+        .blueprint-connector {
+            flex: 0.5;
+            min-width: 40px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .blueprint-connector::before {
+            content: '';
+            flex: 1;
+            border-bottom: 2px dotted var(--color-copper);
+            margin-right: -2px;
+        }
+
+        .blueprint-connector::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid var(--color-copper);
+            border-right: 2px solid var(--color-copper);
+            transform: rotate(45deg);
+        }
+
+        .blueprint-cta {
+            margin-top: 50px;
+            background-color: var(--color-ember);
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .blueprint-cta:hover {
+            background-color: #7a3217;
+        }
+
+        /* ==========================================================================
+           10. Book Showcase Section
+           ========================================================================== */
+        .book-section {
+            background-color: var(--color-parchment);
+            padding: 90px 0;
+        }
+
+        .book-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        .book-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .book-section-heading {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .book-section-subtext {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 15px;
+        }
+
+        .book-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #FBFAF7;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(32, 38, 43, 0.08);
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative background shape */
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            border: 2px solid var(--color-ember);
+            border-radius: 50%;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        .book-visual {
+            width: 38%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        /* Radial glow behind the book */
+        .book-visual::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(176, 106, 59, 0.3) 0%, transparent 70%);
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .book-cover {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            border-radius: 4px;
+            transform: rotateY(-15deg) rotateZ(-2deg);
+            transform-style: preserve-3d;
+            filter: drop-shadow(-15px 25px 30px rgba(32, 38, 43, 0.3));
+            transition: transform 0.4s ease;
+        }
+
+        .book-cover:hover {
+            transform: rotateY(-5deg) rotateZ(0deg);
+        }
+
+        .book-content {
+            width: 58%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .book-eyebrow {
+            font-family: var(--font-heading);
+            color: var(--color-ember);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .book-title {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .book-desc {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .book-bullets {
+            list-style: none;
+            margin: 24px 0 32px 0;
+            padding: 0;
+        }
+
+        .book-bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .book-bullet:last-child {
+            margin-bottom: 0;
+        }
+
+        .book-bullet svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            color: var(--color-ember);
+            margin-top: 2px;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        .book-cta {
+            font-family: var(--font-heading);
+            color: var(--color-ember);
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            align-self: flex-start;
+            position: relative;
+        }
+
+        .book-cta::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-ember);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .book-cta:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* ==========================================================================
+           11. Insights & Media Section
+           ========================================================================== */
+        .insights-section {
+            background-color: var(--color-parchment);
+            padding: 90px 0;
+        }
+
+        .insights-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            display: flex;
+            gap: 24px;
+        }
+
+        .insights-card {
+            flex: 1;
+            background-color: var(--color-white);
+            border: 1px solid rgba(138, 148, 155, 0.3);
+            border-radius: 10px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-eyebrow {
+            font-family: var(--font-heading);
+            color: var(--color-iron);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        /* Card 1: Essays */
+        .essay-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        .essay-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(138, 148, 155, 0.2);
+        }
+
+        .essay-item:last-child {
+            border-bottom: none;
+        }
+
+        .essay-number {
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--color-ember);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            color: var(--color-ember);
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .essay-link {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            font-size: 16px;
+            line-height: 1.4;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .essay-link:hover {
+            color: var(--color-ember);
+            text-decoration: underline;
+        }
+
+        .insights-cta {
+            font-family: var(--font-heading);
+            color: var(--color-ember);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .insights-cta:hover {
+            text-decoration: underline;
+        }
+
+        /* Card 2: Podcast Carousel */
+        .podcast-carousel-wrap {
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .podcast-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            gap: 0;
+            margin-bottom: 12px;
+        }
+
+        .podcast-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: var(--color-charcoal);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Controls */
+        .carousel-controls {
+            position: absolute;
+            top: 40%;
+            left: -16px;
+            right: -16px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .carousel-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--color-charcoal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: auto;
+            box-shadow: 0 4px 12px rgba(32, 38, 43, 0.15);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+        }
+
+        .carousel-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Indicators */
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 16px;
+            margin-bottom: 12px;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(138, 148, 155, 0.3);
+            transition: background-color 0.2s;
+        }
+
+        .carousel-dot.active {
+            background-color: var(--color-ember);
+        }
+
+        .video-caption {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-title {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .video-author {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        /* ==========================================================================
+           12. The Authority Mindset Section
+           ========================================================================== */
+        .mindset-section {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1E3A5F 100%);
+            padding: 90px 0;
+            width: 100%;
+        }
+
+        .mindset-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        .mindset-heading {
+            font-family: var(--font-heading);
+            color: var(--color-white);
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .mindset-flow {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .mindset-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            max-width: 140px;
+        }
+
+        .mindset-icon-circle {
+            width: 64px;
+            height: 64px;
+            border: 1.5px solid var(--color-copper);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .mindset-icon-circle svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--color-copper);
+            stroke-width: 1.5px;
+            fill: none;
+        }
+
+        .mindset-label {
+            font-family: var(--font-heading);
+            color: var(--color-white);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .mindset-connector {
+            flex: 1;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+        }
+
+        .mindset-connector::before {
+            content: '';
+            flex: 1;
+            border-bottom: 1.5px dotted var(--color-copper);
+            margin-right: -2px;
+        }
+
+        .mindset-connector::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-top: 1.5px solid var(--color-copper);
+            border-right: 1.5px solid var(--color-copper);
+            transform: rotate(45deg);
+        }
+
+        /* ==========================================================================
+           13. Testimonials Section
+           ========================================================================== */
+        .testimonials-section {
+            background-color: var(--color-parchment);
+            padding: 90px 0;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .testimonials-heading {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-heading {
+                font-size: 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .testimonials-heading {
+                font-size: 48px;
+            }
+        }
+
+        .testimonials-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .testimonials-divider-line {
+            height: 1px;
+            background-color: rgba(200, 155, 60, 0.4);
+            width: 64px;
+        }
+
+        .testimonials-divider-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #C89B3C;
+        }
+
+        /* Carousel Layout */
+        .testimonials-carousel-wrap {
+            position: relative;
+        }
+
+        .testimonials-track {
+            display: flex;
+            overflow-x: auto;
+            gap: 24px;
+            padding: 8px 0 16px 0;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .testimonials-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card {
+            background-color: var(--color-white);
+            border: 1px solid rgba(200, 155, 60, 0.25);
+            border-radius: 12px;
+            padding: 32px;
+            flex: 0 0 85vw;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        @media (min-width: 640px) {
+            .testimonial-card {
+                flex: 0 0 380px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 420px;
+            }
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(200, 155, 60, 0.3);
+        }
+
+        .testimonial-name {
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-charcoal);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-title {
+            font-family: var(--font-body);
+            font-size: 12px;
+            color: #888;
+        }
+
+        .testimonial-linkedin {
+            color: #0077b5;
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .testimonial-quote-mark {
+            color: #C89B3C;
+            font-family: serif;
+            font-size: 40px;
+            line-height: 1;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-body);
+            font-size: 14.5px;
+            color: rgba(32, 38, 43, 0.75);
+            line-height: 1.6;
+        }
+
+        .t-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            border: 1px solid rgba(0,0,0,0.1);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            color: var(--color-charcoal);
+        }
+
+        @media (min-width: 768px) {
+            .t-carousel-btn {
+                display: flex;
+            }
+        }
+
+        .t-carousel-btn:hover {
+            background-color: #f9f9f9;
+        }
+
+        .t-carousel-btn.prev {
+            left: -20px;
+        }
+
+        .t-carousel-btn.next {
+            right: -20px;
+        }
+
+        .t-carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 32px;
+        }
+
+        .t-carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(138, 148, 155, 0.3);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .t-carousel-dot.active {
+            background-color: #C89B3C;
+        }
+
+        /* ==========================================================================
+           14. Final CTA Section
+           ========================================================================== */
+        .cta-section-wrapper {
+            background-color: var(--color-parchment);
+            padding: 90px 0;
+        }
+
+        .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        .cta-card {
+            background-color: #F7F3EC;
+            border: 1px solid rgba(138, 148, 155, 0.25);
+            border-radius: 14px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cta-icon-circle {
+            width: 56px;
+            height: 56px;
+            border: 1px solid var(--color-ember);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .cta-icon-circle svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-ember);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .cta-heading {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-bottom: 16px;
+        }
+
+        .cta-subtext {
+            font-family: var(--font-body);
+            color: var(--color-iron);
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            background-color: var(--color-ember);
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #7a3217;
+        }
+
+        /* ==========================================================================
+           15. Footer Section
+           ========================================================================== */
+        .site-footer {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1E3A5F 100%);
+            padding: 60px 20px 30px 20px;
+            color: var(--color-white);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-quote-block {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-quote-icon {
+            color: var(--color-ember);
+            font-family: Georgia, serif;
+            font-size: 52px;
+            line-height: 1;
+            margin-bottom: -10px;
+        }
+
+        .footer-quote-text {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+            color: var(--color-white);
+        }
+
+        .footer-quote-author {
+            color: #C89B3C;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.15);
+            margin: 40px 0;
+            width: 100%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .footer-brand-subtitle {
+            color: #C89B3C;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand-desc {
+            font-family: Georgia, serif;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 280px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social-icon {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--color-ember);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-ember);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-social-icon:hover {
+            background-color: var(--color-ember);
+            color: var(--color-white);
+        }
+        
+        .footer-social-icon svg.stroke-icon {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            width: 16px;
+            height: 16px;
+        }
+
+        .footer-col-heading {
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            color: var(--color-white);
+        }
+
+        .footer-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-nav-list a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav-list a:hover {
+            color: #C89B3C;
+        }
+
+        .footer-connect-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .footer-cta-link {
+            color: var(--color-ember);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-cta-link:hover {
+            color: #C89B3C;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+            padding-top: 24px;
+            text-align: center;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+        }
+
+        /* ==========================================================================
+           16. Responsive Breakpoints
+           ========================================================================== */
+
+        /* Prevent horizontal overflow globally */
+        html, body {
+            overflow-x: hidden;
+        }
+
+        /* All images fluid by default */
+        img, video, iframe, canvas {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* --- TABLET: 768px – 1024px --- */
+        @media (max-width: 1024px) {
+            .hero-headline {
+                font-size: 38px !important;
+                line-height: 48px !important;
+            }
+            .hero-body {
+                font-size: 18px !important;
+                line-height: 30px !important;
+            }
+            .header-nav-links {
+                gap: 18px;
+            }
+            .header-nav-links a {
+                font-size: 12.5px;
+            }
+
+            /* Section padding - Tablet */
+            .mind-the-gap,
+            .audience-segmentation,
+            .blueprint-section,
+            .book-section,
+            .insights-section,
+            .mindset-section,
+            .testimonials-section,
+            .cta-section-wrapper {
+                padding: 60px 0;
+            }
+
+            /* 2-col cards stay but with tighter gap */
+            .gap-cards-container,
+            .audience-container {
+                gap: 20px;
+            }
+        }
+
+        /* --- MOBILE: < 768px --- */
+        @media (max-width: 767px) {
+            /* Hide desktop nav, show hamburger */
+            .header-nav {
+                display: none;
+            }
+            .header-hamburger {
+                display: flex;
+            }
+
+            /* Typography scaling - Mobile */
+            .hero-headline, .gap-headline, .blueprint-heading,
+            .book-section-heading, .insights-heading, .mindset-heading,
+            .testimonials-heading, .cta-heading {
+                font-size: 28px !important;
+                line-height: 36px !important;
+            }
+
+            .hero-body, .gap-subtext, .blueprint-subtext,
+            .book-section-subtext, .cta-subtext {
+                font-size: 17px !important;
+                line-height: 28px !important;
+            }
+
+            /* Card titles on mobile */
+            .card h2, .card h3, .feature-card h3, .testimonial-card h3,
+            .gap-card h3, .audience-card h3, .book-card h3, .book-title,
+            .card-label, .audience-heading {
+                font-size: 22px !important;
+                line-height: 30px !important;
+            }
+
+            /* Card body text on mobile */
+            .card p, .feature-card p, .testimonial-card p,
+            .gap-card p, .audience-card p, .book-card p, .book-desc {
+                font-size: 15px !important;
+                line-height: 24px !important;
+            }
+
+            /* Section padding - Mobile */
+            .hero {
+                padding: 100px 0 40px 0;
+            }
+            .mind-the-gap,
+            .audience-segmentation,
+            .blueprint-section,
+            .book-section,
+            .insights-section,
+            .mindset-section,
+            .testimonials-section,
+            .cta-section-wrapper {
+                padding: 40px 0;
+            }
+
+            /* Hero layout - Stack vertically */
+            .hero-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .hero-content,
+            .hero-visual {
+                width: 100%;
+                max-width: 100%;
+            }
+            .image-wrapper {
+                max-width: 320px;
+                max-height: 420px;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            /* CTA group stacked & full-width */
+            .cta-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn,
+            .hero-cta,
+            .blueprint-cta,
+            .book-cta,
+            .cta-button,
+            .insights-cta {
+                width: 100%;
+                text-align: center;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Featured bar - stack */
+            .featured-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .featured-label-block {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-right: 0;
+                padding-bottom: 12px;
+                width: 100%;
+            }
+            .featured-carousel-wrap {
+                width: 100%;
+            }
+
+            /* Mind the Gap cards - single column */
+            .gap-cards-container {
+                grid-template-columns: 1fr;
+                align-items: center;
+                gap: 40px;
+            }
+            .gap-arrow {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            .gap-card {
+                width: 100%;
+                min-height: auto;
+            }
+
+            /* Audience cards - single column */
+            .audience-container {
+                grid-template-columns: 1fr;
+            }
+            .audience-card {
+                min-height: auto;
+            }
+            .audience-heading {
+                font-size: 22px !important;
+            }
+
+            /* Blueprint steps - vertical */
+            .blueprint-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            .blueprint-step {
+                align-items: center;
+                text-align: center;
+            }
+            .step-desc {
+                max-width: 100%;
+            }
+            .blueprint-connector {
+                flex: none;
+                width: 20px;
+                height: 40px;
+                flex-direction: column;
+            }
+            .blueprint-connector::before {
+                border-bottom: none;
+                border-left: 2px dotted var(--color-copper);
+                height: 100%;
+                margin: 0;
+            }
+            .blueprint-connector::after {
+                border-top: none;
+                border-left: none;
+                border-right: 2px solid var(--color-copper);
+                border-bottom: 2px solid var(--color-copper);
+                transform: rotate(45deg);
+                margin-top: -4px;
+            }
+
+            /* Book card - stack */
+            .book-card {
+                flex-direction: column;
+                padding: 24px;
+                gap: 30px;
+            }
+            .book-visual {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            .book-cover {
+                transform: rotateY(0deg) rotateZ(0deg);
+            }
+            .book-content {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+            .book-bullets {
+                text-align: left;
+            }
+            .book-cta {
+                align-self: center;
+            }
+
+            /* Insights - single column */
+            .insights-container {
+                flex-direction: column;
+            }
+            .carousel-controls {
+                left: -10px;
+                right: -10px;
+            }
+
+            /* Mindset flow - vertical */
+            .mindset-flow {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+            .mindset-connector {
+                height: 40px;
+                width: 100%;
+                flex: none;
+                flex-direction: column;
+                align-items: center;
+                padding: 8px 0;
+            }
+            .mindset-connector::before {
+                border-bottom: none;
+                border-left: 1.5px dotted var(--color-copper);
+                height: 100%;
+                margin-right: 0;
+                margin-bottom: -2px;
+            }
+            .mindset-connector::after {
+                border-top: none;
+                border-left: none;
+                border-right: 1.5px solid var(--color-copper);
+                border-bottom: 1.5px solid var(--color-copper);
+                transform: rotate(45deg);
+            }
+            .mindset-heading {
+                font-size: 22px !important;
+            }
+            .mindset-icon-circle {
+                width: 52px;
+                height: 52px;
+            }
+            .mindset-icon-circle svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            /* CTA section */
+            .cta-card {
+                padding: 40px 20px;
+            }
+            .cta-heading {
+                font-size: 24px !important;
+                max-width: 100%;
+            }
+
+            /* Footer grid - 2 col */
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+
+            /* Touch targets minimum 48px */
+            button, a.btn, .carousel-btn, .t-carousel-btn,
+            .carousel-dot, .t-carousel-dot,
+            .header-hamburger {
+                min-height: 48px;
+                min-width: 48px;
+            }
+
+            /* Testimonials card sizing */
+            .testimonial-card {
+                min-width: 280px;
+            }
+        }
+
+        /* --- SMALL MOBILE: < 600px --- */
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 28px;
+            }
+            .footer-brand-desc {
+                margin: 0 auto 20px auto;
+            }
+            .footer-social {
+                justify-content: center;
+            }
+            .footer-nav-list {
+                align-items: center;
+            }
+
+            /* Even smaller headings */
+            .hero-headline, .gap-headline, .blueprint-heading,
+            .book-section-heading, .insights-heading, .mindset-heading,
+            .testimonials-heading, .cta-heading {
+                font-size: 26px !important;
+                line-height: 34px !important;
+            }
+
+            .hero-body, .gap-subtext, .blueprint-subtext,
+            .book-section-subtext, .cta-subtext {
+                font-size: 16px !important;
+                line-height: 26px !important;
+            }
+
+            /* Sections even tighter padding */
+            .mind-the-gap,
+            .audience-segmentation,
+            .blueprint-section,
+            .book-section,
+            .insights-section,
+            .mindset-section,
+            .testimonials-section,
+            .cta-section-wrapper {
+                padding: 36px 0;
+            }
+
+            .hero {
+                padding: 90px 0 30px 0;
+            }
+
+            .image-wrapper {
+                max-width: 260px;
+                max-height: 360px;
+            }
+        }
+
+        /* --- TINY MOBILE: < 500px --- */
+        @media (max-width: 500px) {
+            .tag-pill {
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+
+            .hero-headline {
+                font-size: 24px !important;
+                line-height: 32px !important;
+            }
+
+            .cta-heading {
+                font-size: 22px !important;
+            }
+
+            .site-footer {
+                padding: 40px 16px 24px 16px;
+            }
+        }
+
+        /* ==========================================================================
+           Scroll Animations
+           ========================================================================== */
+        
+        /* Base hidden state for animated elements */
+        .anim-fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered card animations */
+        .anim-stagger {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-stagger.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero image scale-in */
+        .anim-scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-scale-in.is-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* CTA button scale-up */
+        .anim-cta {
+            opacity: 0;
+            transform: scale(0.98);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+        }
+
+        .anim-cta.is-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Line divider width expand */
+        .anim-line {
+            width: 0% !important;
+            transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-line.is-visible {
+            width: 100% !important;
+        }
+
+        /* Accessibility: Disable animations for users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .anim-fade-up,
+            .anim-stagger,
+            .anim-scale-in,
+            .anim-cta,
+            .anim-line {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+                width: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="#" class="header-brand">
+                <span class="header-brand-name">G. MICK SMITH, PHD</span>
+                <span class="header-brand-tagline">Authority Architect</span>
+            </a>
+
+            <nav class="header-nav">
+                <ul class="header-nav-links">
+                    <li><a href="#">Authority Gap</a></li>
+                    <li><a href="#">Blueprint</a></li>
+                    <li><a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Books</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#" class="has-dropdown">
+                            Insights
+                            <svg class="dropdown-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="header-cta">Apply for Phase One &rarr;</a>
+            </nav>
+
+            <button class="header-hamburger" id="headerHamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <a href="#">Authority Gap</a>
+        <a href="#">Blueprint</a>
+        <a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Books</a>
+        <a href="#">About</a>
+        <a href="#">Insights</a>
+        <a href="#" class="mobile-cta">Apply for Phase One &rarr;</a>
+    </div>
+
+    <section class="hero">
+        <div class="hero-container">
+
+            <!-- Left Column: Text & Buttons -->
+            <div class="hero-content">
+                <span class="hero-label">Authority by Architecture</span>
+
+                <h1 class="hero-headline">
+                    Your experience is valuable. But is it intellectual property?
+                </h1>
+
+                <p class="hero-body">
+                    Transform years of experience into a structured authority platform that compounds your influence,
+                    protects your intellectual capital, and creates new opportunities for growth.
+                </p>
+
+                <div class="cta-group">
+                    <a href="#" class="btn btn-primary">
+                        Explore Your Authority Gap &rarr;
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        See How Phase One Works
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual / Image -->
+            <div class="hero-visual">
+                <div class="image-wrapper">
+                    <!-- Transparent PNG portrait sits directly on the CSS smoky gradient -->
+                    <img src="Mick Smith.png" alt="G. Mick Smith, PhD" class="executive-portrait" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- As Featured In — split layout: left static label + right scrolling carousel -->
+    <section class="featured-section" aria-label="As featured in">
+        <div class="featured-inner">
+
+            <!-- Left: static label block -->
+            <div class="featured-label-block">
+                <svg class="featured-press-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 22h16a2 2 0 0 0 2-2V6l-4-4H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="8" y1="12" x2="16" y2="12"/>
+                    <line x1="8" y1="16" x2="16" y2="16"/>
+                    <line x1="8" y1="8" x2="10" y2="8"/>
+                </svg>
+                <span class="featured-label-text">As<br>Featured In</span>
+            </div>
+
+            <!-- Right: scrolling logo carousel -->
+            <div class="featured-carousel-wrap">
+                <div class="logo-carousel">
+
+                    <!-- === Original Set === -->
+                    <a href="#" class="logo-item" aria-label="Harvard Business Review"><span class="logo-name">Harvard Business Review</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="The New York Times"><span class="logo-name">The New York Times</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Forbes"><span class="logo-name">Forbes</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Inc."><span class="logo-name">Inc.</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Success"><span class="logo-name">Success</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="CEO World"><span class="logo-name">CEO World</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Thought Leader"><span class="logo-name">Thought Leader</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+
+                    <!-- === Duplicate Set for seamless loop === -->
+                    <a href="#" class="logo-item" aria-label="Harvard Business Review"><span class="logo-name">Harvard Business Review</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="The New York Times"><span class="logo-name">The New York Times</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Forbes"><span class="logo-name">Forbes</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Inc."><span class="logo-name">Inc.</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Success"><span class="logo-name">Success</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="CEO World"><span class="logo-name">CEO World</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+                    <a href="#" class="logo-item" aria-label="Thought Leader"><span class="logo-name">Thought Leader</span></a>
+                    <div class="logo-sep" aria-hidden="true"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mind the Gap Section -->
+    <section class="mind-the-gap" aria-labelledby="gap-heading">
+        <div class="gap-header">
+            <h2 id="gap-heading" class="gap-headline">Mind the Gap: Turning Experience into Authority</h2>
+            <p class="gap-subtext">The Authority Gap is the distance between what you know and what the market recognizes you for knowing.</p>
+        </div>
+
+        <div class="gap-cards-container">
+            <!-- Left Card -->
+            <div class="gap-card">
+                <div class="card-label">Scattered Knowledge</div>
+                <div class="scattered-tags">
+                    <div class="tag-pill tag-1">Work Experience</div>
+                    <div class="tag-pill tag-2">Client Projects</div>
+                    <div class="tag-pill tag-3">Hard Lessons</div>
+                    <div class="tag-pill tag-4">Observations</div>
+                    <div class="tag-pill tag-5">Domain Knowledge</div>
+                    <div class="tag-pill tag-6">Unarticulated Insights</div>
+                </div>
+            </div>
+
+            <!-- Middle Arrow -->
+            <div class="gap-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+
+            <!-- Right Card -->
+            <div class="gap-card">
+                <div class="card-label">Structured Authority</div>
+                <div class="radar-image-wrapper">
+                    <img src="mick 2nd image.png" alt="Structured Authority Radar Chart" class="radar-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Segmentation Section -->
+    <section class="audience-segmentation" aria-label="Who this is for">
+        <div class="audience-container">
+            <!-- Card 1 -->
+            <div class="audience-card">
+                <div class="audience-header">
+                    <div class="audience-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a9 9 0 0 0-9 9c0 4.5 2 7 2 7h14s2-2.5 2-7a9 9 0 0 0-9-9z"/>
+                            <path d="M12 19v3"/>
+                            <path d="M15 19l2 3"/>
+                            <path d="M9 19l-2 3"/>
+                            <circle cx="12" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="audience-label">For Executives &amp; Senior Leaders</div>
+                </div>
+                <h3 class="audience-heading">Turn experience into influence that scales.</h3>
+                <p class="audience-body">Build a recognized authority platform that elevates your leadership, drives opportunities, and leaves a lasting legacy.</p>
+                <div class="audience-pills">
+                    <div class="audience-pill">Executive Visibility</div>
+                    <div class="audience-pill">Thought Leadership</div>
+                    <div class="audience-pill">Career Acceleration</div>
+                    <div class="audience-pill">Strategic Legacy</div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="audience-card">
+                <div class="audience-header">
+                    <div class="audience-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="7" r="4"/>
+                            <path d="M12 11v6"/>
+                            <path d="M12 17l-5 5"/>
+                            <path d="M12 17l5 5"/>
+                            <path d="M12 14h-6"/>
+                            <circle cx="4" cy="14" r="2"/>
+                            <path d="M12 14h6"/>
+                            <circle cx="20" cy="14" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="audience-label">For Consultants &amp; Experts</div>
+                </div>
+                <h3 class="audience-heading">Architect expertise into intellectual property.</h3>
+                <p class="audience-body">Systematize your methodology, protect your unique approach, and create a business that works with you.</p>
+                <div class="audience-pills">
+                    <div class="audience-pill">Proprietary Frameworks</div>
+                    <div class="audience-pill">Niche Authority</div>
+                    <div class="audience-pill">Repeatable IP</div>
+                    <div class="audience-pill">Sustainable Business</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Blueprint Section -->
+    <section class="blueprint-section" aria-label="The Blueprint">
+        <div class="blueprint-inner">
+            <h2 class="blueprint-heading">The Blueprint: Your Path to Intellectual Property</h2>
+            <p class="blueprint-subtext">A proven three-phase framework to transform your expertise into market-recognized authority.</p>
+
+            <div class="blueprint-steps">
+                <!-- Step 1 -->
+                <div class="blueprint-step">
+                    <div class="step-circle">01</div>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <div class="step-title">Identify</div>
+                    <p class="step-desc">Uncover your unique insights and methodology potential hidden in your experience.</p>
+                </div>
+
+                <div class="blueprint-connector" aria-hidden="true"></div>
+
+                <!-- Step 2 -->
+                <div class="blueprint-step">
+                    <div class="step-circle">02</div>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L3 6l9 4 9-4-9-4z"/>
+                            <path d="M3 11l9 4 9-4"/>
+                            <path d="M3 16l9 4 9-4"/>
+                        </svg>
+                    </div>
+                    <div class="step-title">Structure</div>
+                    <p class="step-desc">Organize your knowledge into a proprietary framework and proof system.</p>
+                </div>
+
+                <div class="blueprint-connector" aria-hidden="true"></div>
+
+                <!-- Step 3 -->
+                <div class="blueprint-step">
+                    <div class="step-circle">03</div>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21h18"/>
+                            <path d="M4 21v-10"/>
+                            <path d="M20 21v-10"/>
+                            <path d="M8 21v-10"/>
+                            <path d="M12 21v-10"/>
+                            <path d="M16 21v-10"/>
+                            <path d="M2 11l10-7 10 7H2z"/>
+                        </svg>
+                    </div>
+                    <div class="step-title">Architect</div>
+                    <p class="step-desc">Build your authority platform, protect your IP, and earn market recognition.</p>
+                </div>
+            </div>
+
+            <a href="#" class="blueprint-cta">Apply for Phase One Blueprint &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Book Showcase Section -->
+    <section class="book-section" aria-labelledby="book-heading">
+        <div class="book-container">
+            <div class="book-header">
+                <h2 id="book-heading" class="book-section-heading">Explore the Intellectual Capital</h2>
+                <p class="book-section-subtext">Books, frameworks, and conversations to help you build lasting authority.</p>
+            </div>
+
+        <div class="book-card">
+            <div class="book-visual">
+                <img src="mick smith book.png" alt="The Authority Architecture Book Cover" class="book-cover">
+            </div>
+            <div class="book-content">
+                <span class="book-eyebrow">Featured Book</span>
+                <h3 class="book-title">The Authority Architecture</h3>
+                <p class="book-desc">A definitive guide to building, protecting, and leveraging intellectual property from your life's work.</p>
+                <p class="book-desc">This book gives you the architecture to transform what you know into what the world recognizes and values.</p>
+                
+                <ul class="book-bullets">
+                    <li class="book-bullet">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span><strong>Identify</strong> the intellectual property hidden inside your experience</span>
+                    </li>
+                    <li class="book-bullet">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span><strong>Structure it</strong> into a defensible, ownable framework</span>
+                    </li>
+                    <li class="book-bullet">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span><strong>Turn it into a platform</strong> that compounds your authority over time</span>
+                    </li>
+                </ul>
+
+                <a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer" class="book-cta">Explore the Book <span>&rarr;</span></a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Insights & Media Section -->
+    <section class="insights-section" aria-label="Insights and Media">
+        <div class="insights-container">
+            
+            <!-- Card 1: Essays -->
+            <div class="insights-card">
+                <div class="card-eyebrow">Key Insights &amp; Strategic Essays</div>
+                <ul class="essay-list">
+                    <li class="essay-item">
+                        <div class="essay-number">01</div>
+                        <a href="#" class="essay-link">Why Expertise Alone Doesn't Create Authority</a>
+                    </li>
+                    <li class="essay-item">
+                        <div class="essay-number">02</div>
+                        <a href="#" class="essay-link">The Intellectual Property Advantage in the AI Era</a>
+                    </li>
+                    <li class="essay-item">
+                        <div class="essay-number">03</div>
+                        <a href="#" class="essay-link">From Experience to Influence: The Architecture of Recognized Authority</a>
+                    </li>
+                </ul>
+                <a href="#" class="insights-cta">View All Insights &rarr;</a>
+            </div>
+
+            <!-- Card 2: Podcast -->
+            <div class="insights-card">
+                <div class="card-eyebrow">The Doctor of Digital Podcast</div>
+                
+                <div class="podcast-carousel-wrap">
+                    <div class="podcast-carousel">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/bQ3ERurAT5Q" title="Dr. Mick Smith - Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/H4Cifd8CCw4" title="Dr. Mick Smith - Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/aXHpeak81AQ" title="Dr. Mick Smith - Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/AijMYTRwMYo" title="Dr. Mick Smith - Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/6VGMmVvL3jo" title="Dr. Mick Smith - Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 6 -->
+                        <div class="carousel-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/voio0aNybjw" title="Dr. Mick Smith - Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" aria-label="Previous video">
+                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                        </button>
+                        <button class="carousel-btn next" aria-label="Next video">
+                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        </button>
+                    </div>
+
+                    <div class="carousel-indicators">
+                        <div class="carousel-dot active"></div>
+                        <div class="carousel-dot"></div>
+                        <div class="carousel-dot"></div>
+                        <div class="carousel-dot"></div>
+                        <div class="carousel-dot"></div>
+                        <div class="carousel-dot"></div>
+                    </div>
+                </div>
+
+                <a href="https://www.youtube.com/@thedoctorofdigital/videos" target="_blank" rel="noopener noreferrer" class="insights-cta">Watch on YouTube &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Authority Mindset Section -->
+    <section class="mindset-section" aria-label="The Authority Mindset">
+        <div class="mindset-container">
+            <h2 class="mindset-heading">The Authority Mindset</h2>
+            
+            <div class="mindset-flow">
+                <!-- Step 1 -->
+                <div class="mindset-step">
+                    <div class="mindset-icon-circle">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18h6"></path>
+                            <path d="M10 22h4"></path>
+                            <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 12 3.5a4.65 4.65 0 0 0-4.5 8c.76.76 1.23 1.52 1.41 2.5"></path>
+                        </svg>
+                    </div>
+                    <div class="mindset-label">Experience</div>
+                </div>
+
+                <div class="mindset-connector" aria-hidden="true"></div>
+
+                <!-- Step 2 -->
+                <div class="mindset-step">
+                    <div class="mindset-icon-circle">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <line x1="12" y1="1" x2="12" y2="4"></line>
+                            <line x1="12" y1="20" x2="12" y2="23"></line>
+                            <line x1="1" y1="12" x2="4" y2="12"></line>
+                            <line x1="20" y1="12" x2="23" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="mindset-label">Insight</div>
+                </div>
+
+                <div class="mindset-connector" aria-hidden="true"></div>
+
+                <!-- Step 3 -->
+                <div class="mindset-step">
+                    <div class="mindset-icon-circle">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z"></path>
+                            <path d="M12 22V11"></path>
+                            <path d="M12 11l8-4.5"></path>
+                            <path d="M4 6.5L12 11"></path>
+                        </svg>
+                    </div>
+                    <div class="mindset-label">Framework</div>
+                </div>
+
+                <div class="mindset-connector" aria-hidden="true"></div>
+
+                <!-- Step 4 -->
+                <div class="mindset-step">
+                    <div class="mindset-icon-circle">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <div class="mindset-label">Intellectual<br>Property</div>
+                </div>
+
+                <div class="mindset-connector" aria-hidden="true"></div>
+
+                <!-- Step 5 -->
+                <div class="mindset-step">
+                    <div class="mindset-icon-circle">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 4l3 11h14l3-11-6 4-4-6-4 6-6-4z"></path>
+                            <path d="M5 19h14v2H5z"></path>
+                        </svg>
+                    </div>
+                    <div class="mindset-label">Authority</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section-wrapper" aria-label="Call to Action">
+        <div class="cta-container">
+            <div class="cta-card">
+                <div class="cta-icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5"></path>
+                        <path d="M12 15l-3-3a22 22 0 0 1-1.34-11.34A2 2 0 0 1 9.5 1.5c1.1.2 5.5.9 8.5 3.9s3.7 7.4 3.9 8.5a2 2 0 0 1-1.16 1.84c-1.1.5-3.5 1-6.14.76"></path>
+                        <path d="M15 9a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"></path>
+                    </svg>
+                </div>
+                <h2 class="cta-heading">You already have the experience.<br>Now build the architecture.</h2>
+                <p class="cta-subtext">Your expertise deserves more than a résumé.<br>It deserves recognition, protection, and impact.</p>
+                <a href="#" class="cta-button">Apply for Phase One Blueprint &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" aria-label="Testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2 class="testimonials-heading">What Industry Leaders Say About Working With Dr. Mick</h2>
+                <div class="testimonials-divider">
+                    <div class="testimonials-divider-line"></div>
+                    <div class="testimonials-divider-dot"></div>
+                    <div class="testimonials-divider-line"></div>
+                </div>
+            </div>
+
+            <div class="testimonials-carousel-wrap">
+                <button class="t-carousel-btn prev" aria-label="Previous review">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <div class="testimonials-track">
+                    <!-- Card 1: Rachel Radway -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGYdyB-cBSHpA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1702582293321?e=1788998400&v=beta&t=RZD3GNvlr-YMyb8yRS45-cIHaDiYPcUcD60C2vDIXU8" alt="Rachel Radway" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Rachel Radway, PCC</h4>
+                                    <p class="testimonial-title">Executive &amp; Leadership Coach</p>
+                                </div>
+                            </div>
+                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">Mick doesn't do surface-level interviews. He listens, reflects, and asks questions that invite clarity rather than performance. If you're writing a book that carries weight and your goal is long-term impact, Mick is a strategic thought partner who'll take both you and your message seriously.</p>
+                    </div>
+
+                    <!-- Card 2: Ben Shaw -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://ui-avatars.com/api/?name=Ben+Shaw&background=1E3A5F&color=fff&size=100&font-size=0.4" alt="Ben Shaw" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Ben Shaw, PhD</h4>
+                                    <p class="testimonial-title">President @ CORE | Author</p>
+                                </div>
+                            </div>
+                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">Mick was a wonderful host who gave an incredibly warm and kind introduction. He genuinely listened in our discussion, which led to him asking excellent questions of both character and content. He did a fantastic job of keeping us on point and on time.</p>
+                    </div>
+
+                    <!-- Card 3: Vladimir Bushin -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGSg12GxolTog/profile-displayphoto-scale_100_100/B4EZ6dSXdMIwAY-/0/1780755299695?e=1788998400&v=beta&t=i5OrqfrQMfHvI0CdrdG3XGG_VDgGyOnlwajm6H1yYeU" alt="Vladimir Bushin" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Vladimir Bushin</h4>
+                                    <p class="testimonial-title">Agentic AI Leader for SMBs</p>
+                                </div>
+                            </div>
+                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">What stood out most was Mick's ability to create a space where ideas aren't just discussed — they're clarified and sharpened into practical strategies. If you're an author aiming to transform a good idea into a credible book, Mick is the partner you want in your corner.</p>
+                    </div>
+
+                    <!-- Card 4: Kim Sorrelle -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQEZe1h6kp5Lyg/profile-displayphoto-scale_100_100/B4EZ.4iKQHIAAc-/0/1785507393412?e=1788998400&v=beta&t=YesYvX2Z0ShcRWv8FgDeI1oporDG5FIT0d5miht7FKU" alt="Kim Sorrelle" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Kim Sorrelle</h4>
+                                    <p class="testimonial-title">Keynote Speaker &amp; Author</p>
+                                </div>
+                            </div>
+                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">Mick isn't just a brilliant host — he's a true listener. He draws out your purpose, aligns it with his insight, and elevates it in a way that makes you think, "Yes, that's what I've been trying to say." His insight into book strategy and soul-aligned storytelling is unmatched.</p>
+                    </div>
+
+                    <!-- Card 5: Ral West -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGcVuxvw7lFKA/profile-displayphoto-scale_100_100/B4EZ0senEoHAAc-/0/1774567715533?e=1788998400&v=beta&t=1R1UZsnsvOb4UqI6h_2WYbxeNqxUJ1hmrMDgk-cGO18" alt="Ral West" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Ral West</h4>
+                                    <p class="testimonial-title">Bestselling Author &amp; Serial Entrepreneur</p>
+                                </div>
+                            </div>
+                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">Mick is a skilled podcast host who naturally draws out conversations that serve his audience well. He has a true talent for helping visionaries turn their ideas into powerful, authority-building books — an invaluable partner for coaches, consultants, and executives alike.</p>
+                    </div>
+
+                    <!-- Card 6: Daniel Lucas -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQG3tRXopz0OZA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1718910951089?e=1788998400&v=beta&t=l8Zf7GoVbAwNaRiT7SafVbvaxh0Ns5HH447aELRyNGk" alt="Daniel Lucas" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Daniel Lucas</h4>
+                                    <p class="testimonial-title">Podcast Host &amp; Producer</p>
+                                </div>
+                            </div>
+                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">Mick creates a unique blend of expertise and authenticity that elevates every single episode. He brings fresh perspectives that challenge conventional thinking and consistently delivers insights that genuinely impact lives. It's an honor to share the mic with him!</p>
+                    </div>
+                </div>
+
+                <button class="t-carousel-btn next" aria-label="Next review">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+
+            <div class="t-carousel-indicators">
+                <div class="t-carousel-dot active"></div>
+                <div class="t-carousel-dot"></div>
+                <div class="t-carousel-dot"></div>
+                <div class="t-carousel-dot"></div>
+                <div class="t-carousel-dot"></div>
+                <div class="t-carousel-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-quote-block">
+                <span class="footer-quote-icon">"</span>
+                <p class="footer-quote-text">Authority isn't claimed — it's architected. When you build the right structure, your impact compounds, your influence scales, and your legacy lasts.</p>
+                <div class="footer-quote-author">&mdash; G. Mick Smith, PhD</div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-grid">
+                <!-- Column 1 -->
+                <div class="footer-brand">
+                    <h3>G. MICK SMITH, PHD</h3>
+                    <div class="footer-brand-subtitle">Authority Architect</div>
+                    <p class="footer-brand-desc">I help executives, leaders, and experts transform experience into intellectual property that creates market-leading authority and lasting impact.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" class="stroke-icon">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" class="stroke-icon">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" class="stroke-icon">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-nav">
+                    <h4 class="footer-col-heading">Navigation</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">Authority Gap</a></li>
+                        <li><a href="#">Blueprint</a></li>
+                        <li><a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Books</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Insights</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-nav">
+                    <h4 class="footer-col-heading">Resources</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-connect">
+                    <h4 class="footer-col-heading">Connect</h4>
+                    <p class="footer-connect-text">Let's build your authority architecture.</p>
+                    <a href="#" class="footer-cta-link">Apply for Phase One &rarr;</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 G. Mick Smith, PhD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for the Podcast & Testimonial Carousels -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Podcast Carousel Logic
+            const podCarousel = document.querySelector('.podcast-carousel');
+            const podPrev = document.querySelector('.carousel-btn.prev');
+            const podNext = document.querySelector('.carousel-btn.next');
+            const podDots = document.querySelectorAll('.carousel-dot');
+
+            if (podCarousel && podPrev && podNext) {
+                podPrev.addEventListener('click', () => {
+                    podCarousel.scrollBy({ left: -podCarousel.clientWidth, behavior: 'smooth' });
+                });
+                
+                podNext.addEventListener('click', () => {
+                    podCarousel.scrollBy({ left: podCarousel.clientWidth, behavior: 'smooth' });
+                });
+
+                podCarousel.addEventListener('scroll', () => {
+                    const index = Math.round(podCarousel.scrollLeft / podCarousel.clientWidth);
+                    podDots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                });
+            }
+
+            // Testimonials Carousel Logic
+            const tTrack = document.querySelector('.testimonials-track');
+            const tPrev = document.querySelector('.t-carousel-btn.prev');
+            const tNext = document.querySelector('.t-carousel-btn.next');
+            const tDots = document.querySelectorAll('.t-carousel-dot');
+
+            if (tTrack && tPrev && tNext) {
+                tPrev.addEventListener('click', () => {
+                    // Scroll by roughly one card width
+                    tTrack.scrollBy({ left: -400, behavior: 'smooth' });
+                });
+                
+                tNext.addEventListener('click', () => {
+                    tTrack.scrollBy({ left: 400, behavior: 'smooth' });
+                });
+
+                tTrack.addEventListener('scroll', () => {
+                    const maxScroll = tTrack.scrollWidth - tTrack.clientWidth;
+                    if (maxScroll <= 0) return;
+                    
+                    const scrollFraction = tTrack.scrollLeft / maxScroll;
+                    const numDots = tDots.length;
+                    
+                    let index = Math.round(scrollFraction * (numDots - 1));
+                    if(index < 0) index = 0;
+                    if(index >= numDots) index = numDots - 1;
+                    
+                    tDots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                });
+            }
+        });
+    </script>
+
+    <!-- Scroll Animation Engine (Intersection Observer - Zero Dependencies) -->
+    <script>
+    (function() {
+        // Respect reduced motion preference
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        // Helper: add animation class to elements
+        function tagElements(selector, animClass) {
+            document.querySelectorAll(selector).forEach(function(el) {
+                if (!el.classList.contains(animClass)) {
+                    el.classList.add(animClass);
+                }
+            });
+        }
+
+        // 1. Text Reveal — Headings, eyebrows, paragraphs
+        tagElements([
+            '.hero-headline', '.hero-body', '.hero-tag-line',
+            '.gap-headline', '.gap-subtext',
+            '.audience-heading',
+            '.blueprint-heading', '.blueprint-subtext',
+            '.book-section-heading', '.book-section-subtext',
+            '.insights-heading',
+            '.mindset-heading',
+            '.cta-heading', '.cta-subtext',
+            '.testimonials-heading',
+            '.card-eyebrow', '.book-eyebrow',
+            '.footer-quote-text', '.footer-attribution'
+        ].join(','), 'anim-fade-up');
+
+        // 2. Staggered cards & grid items
+        tagElements([
+            '.gap-card', '.audience-card',
+            '.blueprint-step', '.blueprint-connector',
+            '.mindset-step', '.mindset-connector',
+            '.insights-card',
+            '.book-card',
+            '.testimonial-card',
+            '.essay-item',
+            '.book-bullet'
+        ].join(','), 'anim-stagger');
+
+        // 3. Hero portrait scale-in
+        tagElements('.hero-portrait-wrapper, .hero-image, .hero-portrait', 'anim-scale-in');
+
+        // 4. CTA buttons
+        tagElements([
+            '.hero-cta', '.blueprint-cta', '.book-cta', '.cta-button', '.insights-cta',
+            '.btn', '.header-cta'
+        ].join(','), 'anim-cta');
+
+        // 5. Line dividers
+        tagElements('.featured-divider, .gold-divider', 'anim-line');
+
+        // Intersection Observer — fires once per element
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    // For staggered items, calculate delay based on sibling index
+                    var el = entry.target;
+                    if (el.classList.contains('anim-stagger')) {
+                        var parent = el.parentElement;
+                        var siblings = parent ? Array.from(parent.children).filter(function(c) {
+                            return c.classList.contains('anim-stagger');
+                        }) : [];
+                        var idx = siblings.indexOf(el);
+                        if (idx > 0) {
+                            el.style.transitionDelay = (idx * 0.15) + 's';
+                        }
+                    }
+                    el.classList.add('is-visible');
+                    observer.unobserve(el); // once: true
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -15% 0px' // triggers at bottom 15% of viewport
+        });
+
+        // Observe all animated elements
+        document.querySelectorAll('.anim-fade-up, .anim-stagger, .anim-scale-in, .anim-cta, .anim-line').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+    </script>
+
+</body>
+
+</html>
