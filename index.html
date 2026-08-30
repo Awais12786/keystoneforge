@@ -3297,6 +3297,25 @@
     <!-- JS for the Podcast & Testimonial Carousels -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger Menu Logic
+            const hamburger = document.getElementById('headerHamburger');
+            const mobileNav = document.getElementById('mobileNavOverlay');
+            
+            if (hamburger && mobileNav) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    mobileNav.classList.toggle('open');
+                });
+                
+                // Close menu when clicking a link
+                mobileNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        mobileNav.classList.remove('open');
+                    });
+                });
+            }
+
             // Podcast Carousel Logic
             const podCarousel = document.querySelector('.podcast-carousel');
             const podPrev = document.querySelector('.carousel-btn.prev');
