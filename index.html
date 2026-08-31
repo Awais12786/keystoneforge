@@ -9,11 +9,12 @@
     <!-- Adobe Fonts (Typekit) -->
     <!-- Replace 'xxxxxx.css' with your actual Adobe Fonts Project ID -->
     <link rel="stylesheet" href="https://use.typekit.net/xxxxxx.css">
-    
+
     <!-- Fallback Google Fonts (Jost & Crimson Pro) until Typekit is active -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Crimson+Pro:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* ==========================================================================
@@ -51,15 +52,23 @@
         /* ==========================================================================
            Typography Overrides (as per User Request)
            ========================================================================== */
-        
+
         /* 1. Global Font Families */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--font-heading) !important;
             font-weight: 700 !important;
             font-style: normal !important;
         }
 
-        p, span, div, li {
+        p,
+        span,
+        div,
+        li {
             font-family: var(--font-body);
         }
 
@@ -88,61 +97,119 @@
         }
 
         /* 4. Card Heading Hierarchy Fix (26px) */
-        .card h2, .card h3, .feature-card h3, .testimonial-card h3,
-        .gap-card h3, .audience-card h3, .book-card h3, .book-title,
-        .card-label, .audience-heading {
+        .card h2,
+        .card h3,
+        .feature-card h3,
+        .testimonial-card h3,
+        .gap-card h3,
+        .audience-card h3,
+        .book-card h3,
+        .book-title,
+        .card-label,
+        .audience-heading {
             font-family: var(--font-heading) !important;
             font-size: 26px !important;
             line-height: 34px !important;
         }
 
         /* 5. Card Paragraphs & Body Copy (16px) */
-        .card p, .feature-card p, .testimonial-card p,
-        .gap-card p, .audience-card p, .book-card p, .book-desc, .t-quote {
+        .card p,
+        .feature-card p,
+        .testimonial-card p,
+        .gap-card p,
+        .audience-card p,
+        .book-card p,
+        .book-desc,
+        .t-quote {
             font-size: 16px !important;
             line-height: 26px !important;
         }
 
         /* 6. Step Headers & Small Titles (20px) */
-        .step-title, .mindset-label {
+        .step-title,
+        .mindset-label {
             font-size: 20px !important;
         }
 
         /* 7. Sans-Serif Secondary Text & UI Elements */
-        .btn, .tag-pill, .audience-pill, .book-eyebrow, .featured-label-text, .step-circle, .header-brand-name, .header-tagline, .header-nav-links a {
+        .btn,
+        .tag-pill,
+        .audience-pill,
+        .book-eyebrow,
+        .featured-label-text,
+        .step-circle,
+        .header-brand-name,
+        .header-tagline,
+        .header-nav-links a {
             font-family: var(--font-heading) !important;
         }
 
         /* Header & Footer text elements get Europa */
-        .site-header *, .site-footer * {
+        .site-header *,
+        .site-footer * {
             font-family: var(--font-heading) !important;
         }
 
         /* ==========================================================================
            Dark Background Contrast Fixes
            ========================================================================== */
-        
+
         /* Force text colors on light backgrounds */
-        body { color: #111111; }
-        .hero-headline, .gap-headline, .audience-heading, .book-section-heading, .insights-heading, .testimonials-heading, .cta-heading { color: #111111 !important; }
-        .hero-body, .gap-subtext, .book-section-subtext, .cta-subtext, .book-desc, .t-quote { color: #111111 !important; }
+        body {
+            color: #111111;
+        }
+
+        .hero-headline,
+        .gap-headline,
+        .audience-heading,
+        .book-section-heading,
+        .insights-heading,
+        .testimonials-heading,
+        .cta-heading {
+            color: #111111 !important;
+        }
+
+        .hero-body,
+        .gap-subtext,
+        .book-section-subtext,
+        .cta-subtext,
+        .book-desc,
+        .t-quote {
+            color: #111111 !important;
+        }
 
         /* Dark Sections Contrast Override */
-        .dark-section, 
-        .blueprint-section, 
-        .mindset-section, 
+        .dark-section,
+        .blueprint-section,
+        .mindset-section,
         .site-footer {
             color: #FFFFFF !important;
         }
 
-        .dark-section h1, .dark-section h2, .dark-section h3,
-        .blueprint-section h2, .blueprint-section h3, .blueprint-heading,
-        .mindset-section h2, .mindset-section h3, .mindset-heading,
-        .site-footer h2, .site-footer h3, .site-footer h4, .site-footer a, .footer-col-heading {
+        .dark-section h1,
+        .dark-section h2,
+        .dark-section h3,
+        .blueprint-section h2,
+        .blueprint-section h3,
+        .blueprint-heading,
+        .mindset-section h2,
+        .mindset-section h3,
+        .mindset-heading,
+        .site-footer h2,
+        .site-footer h3,
+        .site-footer h4,
+        .site-footer a,
+        .footer-col-heading {
             color: #FFFFFF !important;
         }
 
-        .dark-section p, .blueprint-section p, .blueprint-subtext, .mindset-section p, .site-footer p, .footer-quote-text, .footer-connect-text {
+        .dark-section p,
+        .blueprint-section p,
+        .blueprint-subtext,
+        .mindset-section p,
+        .site-footer p,
+        .footer-quote-text,
+        .footer-connect-text {
             color: rgba(255, 255, 255, 0.85) !important;
         }
 
@@ -150,9 +217,11 @@
         .footer-nav-list a {
             color: rgba(255, 255, 255, 0.85) !important;
         }
+
         .footer-nav-list a:hover {
             color: #DCCBB4 !important;
         }
+
         .footer-cta-link {
             color: #DCCBB4 !important;
         }
@@ -331,9 +400,11 @@
         .header-hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translateY(5px);
         }
+
         .header-hamburger.active span:nth-child(2) {
             opacity: 0;
         }
+
         .header-hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translateY(-5px);
         }
@@ -509,6 +580,36 @@
             background-color: rgba(32, 38, 43, 0.05);
         }
 
+        /* Quiet text link style for secondary hero CTA */
+        .hero-text-link {
+            font-family: var(--font-heading);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--color-iron);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+            border: none;
+            background: none;
+        }
+
+        .hero-text-link:hover {
+            color: var(--color-ember);
+        }
+
+        .hero-text-link::after {
+            content: '\2192';
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-text-link:hover::after {
+            transform: translateX(3px);
+        }
+
         /* ==========================================================================
            5. Image & Smoky Background Texture (Right Column)
            This is the key fix: multiple layered radial gradients create a warm,
@@ -572,117 +673,116 @@
         }
 
         /* ==========================================================================
-           6. Combined "As Featured In" Section
+           6. Executive "As Featured In" Logo Bar
            ========================================================================== */
-        .featured-section {
+        .featured-section-v2 {
             width: 100%;
-            background-color: var(--color-ember);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-            padding: 18px 20px;
-            overflow: hidden;
+            background-color: var(--color-parchment);
+            border-top: 1px solid #EBE6DF;
+            border-bottom: 1px solid #EBE6DF;
+            padding: 16px 0;
+            margin: 0;
         }
 
-        .featured-inner {
-            max-width: 1200px;
+        .featured-inner-v2 {
+            max-width: 1152px;
             margin: 0 auto;
-            padding-left: 20px;
-            padding-right: 20px;
-            width: 100%;
+        }
+
+        .featured-grid-v2 {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 24px;
+            justify-content: space-between;
+            gap: clamp(20px, 4vw, 80px);
+            padding: 0 24px;
+            margin: 0;
+            overflow-x: auto;
         }
 
-        /* Left: static label block */
-        .featured-label-block {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-            padding-right: 28px;
-            border-right: 1px solid rgba(255, 255, 255, 0.25);
-        }
-
-        .featured-press-icon {
-            width: 26px;
-            height: 26px;
-            flex-shrink: 0;
-            color: var(--color-gold);
-        }
-
-        .featured-label-text {
-            font-family: var(--font-heading);
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--color-gold);
-            line-height: 1.3;
-            white-space: nowrap;
-        }
-
-        /* Right: scrolling carousel */
-        .featured-carousel-wrap {
-            flex: 1;
-            overflow: hidden;
-            min-width: 0;
-            mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-        }
-
-        .logo-carousel {
-            display: flex;
-            width: max-content;
-            align-items: center;
-            animation: logoScroll 28s linear infinite;
-        }
-
-        .logo-carousel:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes logoScroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Each logo has auto width with consistent padding so text never overlaps */
-        .logo-item {
-            flex: 0 0 auto;
-            height: 44px;
-            padding: 0 28px;
+        .logo-wrapper {
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.80);
-            opacity: 1;
-            transition: color 0.3s ease;
-        }
-
-        .logo-item:hover {
-            color: var(--color-white);
-        }
-
-        /* Dot between logos */
-        .logo-sep {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background-color: var(--color-gold);
             flex-shrink: 0;
-            opacity: 0.7;
-            margin: 0 2px;
         }
 
-        /* Single unified style for all publication names */
-        .logo-name {
-            font-family: var(--font-heading);
-            font-size: 16px;
-            font-weight: 500;
-            white-space: nowrap;
-            letter-spacing: 0.01em;
+        .logo-wrapper img {
+            max-height: 28px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-wrapper img:hover {
+            opacity: 1;
+        }
+
+        .logo-forbes-v2,
+        .logo-inc-v2,
+        .logo-nyt-v2 {
+            max-height: 28px;
+            width: auto;
+        }
+
+        .logo-hbr-v2 {
+            max-height: 36px;
+            width: auto;
+            transform: scale(1.25);
+            transform-origin: center;
+        }
+
+        .logo-entrepreneur-v2 {
+            max-height: 28px;
+            width: auto;
+            max-width: 130px;
+            transform: scale(1.1);
+            transform-origin: center;
+        }
+
+        .logo-fastcompany-v2 {
+            max-height: 22px;
+            width: auto;
+            max-width: 140px;
+            transform: scale(1.4);
+            transform-origin: center;
+        }
+
+        @media (max-width: 767px) {
+            .featured-grid-v2 {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 24px;
+                padding: 0 16px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .logo-wrapper {
+                height: 48px;
+            }
+
+            .logo-forbes-v2,
+            .logo-inc-v2,
+            .logo-nyt-v2 {
+                max-height: 28px;
+            }
+
+            .logo-hbr-v2 {
+                max-height: 40px;
+            }
+
+            .logo-entrepreneur-v2 {
+                max-height: 30px;
+            }
+
+            .logo-fastcompany-v2 {
+                max-height: 24px;
+            }
         }
 
         /* ==========================================================================
@@ -777,14 +877,39 @@
         }
 
         /* Organic layout positioning */
-        .tag-1 { top: 0%; left: 50%; transform: translateX(-50%); }
-        .tag-2 { top: 25%; left: 2%; }
-        .tag-3 { top: 25%; right: 2%; }
-        .tag-4 { top: 50%; left: 50%; transform: translateX(-50%); }
-        .tag-5 { top: 75%; left: 5%; }
-        .tag-6 { top: 75%; right: 5%; }
+        .tag-1 {
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-        /* Right Card - Hexagon Image */
+        .tag-2 {
+            top: 25%;
+            left: 2%;
+        }
+
+        .tag-3 {
+            top: 25%;
+            right: 2%;
+        }
+
+        .tag-4 {
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tag-5 {
+            top: 75%;
+            left: 5%;
+        }
+
+        .tag-6 {
+            top: 75%;
+            right: 5%;
+        }
+
+        /* Right Card - Editorial Radar Diagram */
         .radar-image-wrapper {
             flex: 1;
             display: flex;
@@ -800,6 +925,42 @@
             object-fit: contain;
         }
 
+        .editorial-radar {
+            width: 100%;
+            max-width: 320px;
+            padding: 12px;
+        }
+
+        .editorial-radar .radar-grid {
+            fill: none;
+            stroke: rgba(74, 84, 89, 0.14);
+            stroke-width: 0.8;
+        }
+
+        .editorial-radar .radar-axis {
+            stroke: rgba(74, 84, 89, 0.2);
+            stroke-width: 0.6;
+        }
+
+        .editorial-radar .radar-shape {
+            fill: rgba(140, 59, 27, 0.08);
+            stroke: var(--color-ember);
+            stroke-width: 1.6;
+        }
+
+        .editorial-radar .radar-dot {
+            fill: var(--color-ember);
+        }
+
+        .editorial-radar .radar-label {
+            font-family: var(--font-heading);
+            font-size: 10px;
+            font-weight: 700;
+            fill: var(--color-iron);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
         /* Middle Arrow */
         .gap-arrow {
             color: var(--color-ember);
@@ -812,7 +973,7 @@
             justify-content: center;
             z-index: 10;
         }
-        
+
         .gap-arrow svg {
             width: 28px;
             height: 28px;
@@ -999,7 +1160,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .step-icon svg {
             width: 100%;
             height: 100%;
@@ -1282,7 +1443,8 @@
             padding-right: 20px;
             width: 100%;
             display: flex;
-            gap: 24px;
+            flex-direction: column;
+            gap: 48px;
         }
 
         .insights-card {
@@ -1369,35 +1531,92 @@
             text-decoration: underline;
         }
 
-        /* Card 2: Podcast Carousel */
-        .podcast-carousel-wrap {
-            position: relative;
-            flex: 1;
+        /* Flagship Video Block */
+        .flagship-video-block {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
         }
 
-        .podcast-carousel {
+        .flagship-video-wrapper {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            background-color: var(--color-charcoal);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(32, 38, 43, 0.12);
+        }
+
+        .flagship-video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .flagship-video-link {
+            font-family: var(--font-heading);
+            color: var(--color-iron);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s ease;
+        }
+
+        .flagship-video-link:hover {
+            color: var(--color-ember);
+        }
+
+        /* Value Pillars */
+        .value-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            width: 100%;
+        }
+
+        .value-pillar {
+            background-color: var(--color-white);
+            border: 1px solid rgba(138, 148, 155, 0.2);
+            border-radius: 10px;
+            padding: 32px 28px;
             display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-            gap: 0;
+            flex-direction: column;
+        }
+
+        .value-pillar-title {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-charcoal);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
             margin-bottom: 12px;
+            line-height: 1.4;
         }
 
-        .podcast-carousel::-webkit-scrollbar {
-            display: none;
+        .value-pillar-dash {
+            width: 28px;
+            height: 2px;
+            background-color: var(--color-ember);
+            margin-bottom: 14px;
         }
 
-        .carousel-slide {
-            flex: 0 0 100%;
-            scroll-snap-align: start;
-            display: flex;
-            flex-direction: column;
+        .value-pillar-text {
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--color-iron);
+        }
+
+        @media (max-width: 767px) {
+            .value-pillars {
+                grid-template-columns: 1fr;
+            }
         }
 
         .video-wrapper {
@@ -1413,87 +1632,6 @@
             width: 100%;
             height: 100%;
             border: none;
-        }
-
-        /* Controls */
-        .carousel-controls {
-            position: absolute;
-            top: 40%;
-            left: -16px;
-            right: -16px;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .carousel-btn {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            color: var(--color-charcoal);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            pointer-events: auto;
-            box-shadow: 0 4px 12px rgba(32, 38, 43, 0.15);
-            transition: background-color 0.2s, transform 0.2s;
-        }
-
-        .carousel-btn:hover {
-            background-color: #fff;
-            transform: scale(1.05);
-        }
-
-        .carousel-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* Indicators */
-        .carousel-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-            margin-top: 16px;
-            margin-bottom: 12px;
-        }
-
-        .carousel-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: rgba(138, 148, 155, 0.3);
-            transition: background-color 0.2s;
-        }
-
-        .carousel-dot.active {
-            background-color: var(--color-ember);
-        }
-
-        .video-caption {
-            margin-top: 12px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .video-title {
-            font-family: var(--font-body);
-            color: var(--color-charcoal);
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .video-author {
-            font-family: var(--font-body);
-            color: var(--color-iron);
-            font-size: 13px;
-            margin-top: 2px;
         }
 
         /* ==========================================================================
@@ -1625,7 +1763,7 @@
                 font-size: 40px;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .testimonials-heading {
                 font-size: 48px;
@@ -1682,10 +1820,10 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             transition: box-shadow 0.3s ease;
         }
-        
+
         @media (min-width: 640px) {
             .testimonial-card {
                 flex: 0 0 380px;
@@ -1699,7 +1837,7 @@
         }
 
         .testimonial-card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial-header {
@@ -1771,12 +1909,12 @@
             height: 40px;
             border-radius: 50%;
             background-color: var(--color-white);
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             color: var(--color-charcoal);
         }
 
@@ -2007,7 +2145,7 @@
             background-color: var(--color-ember);
             color: var(--color-white);
         }
-        
+
         .footer-social-icon svg.stroke-icon {
             fill: none;
             stroke: currentColor;
@@ -2083,12 +2221,16 @@
            ========================================================================== */
 
         /* Prevent horizontal overflow globally */
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
         }
 
         /* All images fluid by default */
-        img, video, iframe, canvas {
+        img,
+        video,
+        iframe,
+        canvas {
             max-width: 100%;
             height: auto;
         }
@@ -2099,13 +2241,16 @@
                 font-size: 38px !important;
                 line-height: 48px !important;
             }
+
             .hero-body {
                 font-size: 18px !important;
                 line-height: 30px !important;
             }
+
             .header-nav-links {
                 gap: 18px;
             }
+
             .header-nav-links a {
                 font-size: 12.5px;
             }
@@ -2131,39 +2276,61 @@
 
         /* --- MOBILE: < 768px --- */
         @media (max-width: 767px) {
+
             /* Hide desktop nav, show hamburger */
             .header-nav {
                 display: none;
             }
+
             .header-hamburger {
                 display: flex;
             }
 
             /* Typography scaling - Mobile */
-            .hero-headline, .gap-headline, .blueprint-heading,
-            .book-section-heading, .insights-heading, .mindset-heading,
-            .testimonials-heading, .cta-heading {
+            .hero-headline,
+            .gap-headline,
+            .blueprint-heading,
+            .book-section-heading,
+            .insights-heading,
+            .mindset-heading,
+            .testimonials-heading,
+            .cta-heading {
                 font-size: 28px !important;
                 line-height: 36px !important;
             }
 
-            .hero-body, .gap-subtext, .blueprint-subtext,
-            .book-section-subtext, .cta-subtext {
+            .hero-body,
+            .gap-subtext,
+            .blueprint-subtext,
+            .book-section-subtext,
+            .cta-subtext {
                 font-size: 17px !important;
                 line-height: 28px !important;
             }
 
             /* Card titles on mobile */
-            .card h2, .card h3, .feature-card h3, .testimonial-card h3,
-            .gap-card h3, .audience-card h3, .book-card h3, .book-title,
-            .card-label, .audience-heading {
+            .card h2,
+            .card h3,
+            .feature-card h3,
+            .testimonial-card h3,
+            .gap-card h3,
+            .audience-card h3,
+            .book-card h3,
+            .book-title,
+            .card-label,
+            .audience-heading {
                 font-size: 22px !important;
                 line-height: 30px !important;
             }
 
             /* Card body text on mobile */
-            .card p, .feature-card p, .testimonial-card p,
-            .gap-card p, .audience-card p, .book-card p, .book-desc {
+            .card p,
+            .feature-card p,
+            .testimonial-card p,
+            .gap-card p,
+            .audience-card p,
+            .book-card p,
+            .book-desc {
                 font-size: 15px !important;
                 line-height: 24px !important;
             }
@@ -2172,6 +2339,7 @@
             .hero {
                 padding: 100px 0 40px 0;
             }
+
             .mind-the-gap,
             .audience-segmentation,
             .blueprint-section,
@@ -2188,11 +2356,13 @@
                 flex-direction: column;
                 gap: 40px;
             }
+
             .hero-content,
             .hero-visual {
                 width: 100%;
                 max-width: 100%;
             }
+
             .image-wrapper {
                 max-width: 320px;
                 max-height: 420px;
@@ -2205,6 +2375,7 @@
                 flex-direction: column;
                 width: 100%;
             }
+
             .btn,
             .hero-cta,
             .blueprint-cta,
@@ -2225,6 +2396,7 @@
                 align-items: flex-start;
                 gap: 16px;
             }
+
             .featured-label-block {
                 border-right: none;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -2232,6 +2404,7 @@
                 padding-bottom: 12px;
                 width: 100%;
             }
+
             .featured-carousel-wrap {
                 width: 100%;
             }
@@ -2242,9 +2415,11 @@
                 align-items: center;
                 gap: 40px;
             }
+
             .gap-arrow {
                 transform: translate(-50%, -50%) rotate(90deg);
             }
+
             .gap-card {
                 width: 100%;
                 min-height: auto;
@@ -2254,9 +2429,11 @@
             .audience-container {
                 grid-template-columns: 1fr;
             }
+
             .audience-card {
                 min-height: auto;
             }
+
             .audience-heading {
                 font-size: 22px !important;
             }
@@ -2267,25 +2444,30 @@
                 align-items: center;
                 gap: 24px;
             }
+
             .blueprint-step {
                 align-items: center;
                 text-align: center;
             }
+
             .step-desc {
                 max-width: 100%;
             }
+
             .blueprint-connector {
                 flex: none;
                 width: 20px;
                 height: 40px;
                 flex-direction: column;
             }
+
             .blueprint-connector::before {
                 border-bottom: none;
                 border-left: 2px dotted var(--color-copper);
                 height: 100%;
                 margin: 0;
             }
+
             .blueprint-connector::after {
                 border-top: none;
                 border-left: none;
@@ -2301,22 +2483,27 @@
                 padding: 24px;
                 gap: 30px;
             }
+
             .book-visual {
                 width: 100%;
                 max-width: 200px;
                 margin: 0 auto;
             }
+
             .book-cover {
                 transform: rotateY(0deg) rotateZ(0deg);
             }
+
             .book-content {
                 width: 100%;
                 align-items: center;
                 text-align: center;
             }
+
             .book-bullets {
                 text-align: left;
             }
+
             .book-cta {
                 align-self: center;
             }
@@ -2325,6 +2512,7 @@
             .insights-container {
                 flex-direction: column;
             }
+
             .carousel-controls {
                 left: -10px;
                 right: -10px;
@@ -2336,6 +2524,7 @@
                 align-items: center;
                 gap: 16px;
             }
+
             .mindset-connector {
                 height: 40px;
                 width: 100%;
@@ -2344,6 +2533,7 @@
                 align-items: center;
                 padding: 8px 0;
             }
+
             .mindset-connector::before {
                 border-bottom: none;
                 border-left: 1.5px dotted var(--color-copper);
@@ -2351,6 +2541,7 @@
                 margin-right: 0;
                 margin-bottom: -2px;
             }
+
             .mindset-connector::after {
                 border-top: none;
                 border-left: none;
@@ -2358,13 +2549,16 @@
                 border-bottom: 1.5px solid var(--color-copper);
                 transform: rotate(45deg);
             }
+
             .mindset-heading {
                 font-size: 22px !important;
             }
+
             .mindset-icon-circle {
                 width: 52px;
                 height: 52px;
             }
+
             .mindset-icon-circle svg {
                 width: 22px;
                 height: 22px;
@@ -2374,6 +2568,7 @@
             .cta-card {
                 padding: 40px 20px;
             }
+
             .cta-heading {
                 font-size: 24px !important;
                 max-width: 100%;
@@ -2386,8 +2581,12 @@
             }
 
             /* Touch targets minimum 48px */
-            button, a.btn, .carousel-btn, .t-carousel-btn,
-            .carousel-dot, .t-carousel-dot,
+            button,
+            a.btn,
+            .carousel-btn,
+            .t-carousel-btn,
+            .carousel-dot,
+            .t-carousel-dot,
             .header-hamburger {
                 min-height: 48px;
                 min-width: 48px;
@@ -2406,26 +2605,37 @@
                 text-align: center;
                 gap: 28px;
             }
+
             .footer-brand-desc {
                 margin: 0 auto 20px auto;
             }
+
             .footer-social {
                 justify-content: center;
             }
+
             .footer-nav-list {
                 align-items: center;
             }
 
             /* Even smaller headings */
-            .hero-headline, .gap-headline, .blueprint-heading,
-            .book-section-heading, .insights-heading, .mindset-heading,
-            .testimonials-heading, .cta-heading {
+            .hero-headline,
+            .gap-headline,
+            .blueprint-heading,
+            .book-section-heading,
+            .insights-heading,
+            .mindset-heading,
+            .testimonials-heading,
+            .cta-heading {
                 font-size: 26px !important;
                 line-height: 34px !important;
             }
 
-            .hero-body, .gap-subtext, .blueprint-subtext,
-            .book-section-subtext, .cta-subtext {
+            .hero-body,
+            .gap-subtext,
+            .blueprint-subtext,
+            .book-section-subtext,
+            .cta-subtext {
                 font-size: 16px !important;
                 line-height: 26px !important;
             }
@@ -2476,7 +2686,7 @@
         /* ==========================================================================
            Scroll Animations
            ========================================================================== */
-        
+
         /* Base hidden state for animated elements */
         .anim-fade-up {
             opacity: 0;
@@ -2517,7 +2727,7 @@
         .anim-cta {
             opacity: 0;
             transform: scale(0.98);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+            transition: opacity 0.25s ease-out 0s, transform 0.25s ease-out 0s;
         }
 
         .anim-cta.is-visible {
@@ -2537,6 +2747,7 @@
 
         /* Accessibility: Disable animations for users who prefer reduced motion */
         @media (prefers-reduced-motion: reduce) {
+
             .anim-fade-up,
             .anim-stagger,
             .anim-scale-in,
@@ -2565,12 +2776,15 @@
                 <ul class="header-nav-links">
                     <li><a href="#">Authority Gap</a></li>
                     <li><a href="#">Blueprint</a></li>
-                    <li><a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Books</a></li>
+                    <li><a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true"
+                            target="_blank" rel="noopener noreferrer">Books</a></li>
                     <li><a href="#">About</a></li>
                     <li>
                         <a href="#" class="has-dropdown">
                             Insights
-                            <svg class="dropdown-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg class="dropdown-arrow" viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -2589,7 +2803,8 @@
     <div class="mobile-nav-overlay" id="mobileNavOverlay">
         <a href="#">Authority Gap</a>
         <a href="#">Blueprint</a>
-        <a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Books</a>
+        <a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true"
+            target="_blank" rel="noopener noreferrer">Books</a>
         <a href="#">About</a>
         <a href="#">Insights</a>
         <a href="#" class="mobile-cta">Apply for Phase One &rarr;</a>
@@ -2615,7 +2830,7 @@
                     <a href="#" class="btn btn-primary">
                         Explore Your Authority Gap &rarr;
                     </a>
-                    <a href="#" class="btn btn-secondary">
+                    <a href="#" class="hero-text-link">
                         See How Phase One Works
                     </a>
                 </div>
@@ -2631,62 +2846,35 @@
 
         </div>
     </section>
-
-    <!-- As Featured In — split layout: left static label + right scrolling carousel -->
-    <section class="featured-section" aria-label="As featured in">
-        <div class="featured-inner">
-
-            <!-- Left: static label block -->
-            <div class="featured-label-block">
-                <svg class="featured-press-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M4 22h16a2 2 0 0 0 2-2V6l-4-4H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/>
-                    <polyline points="14 2 14 8 20 8"/>
-                    <line x1="8" y1="12" x2="16" y2="12"/>
-                    <line x1="8" y1="16" x2="16" y2="16"/>
-                    <line x1="8" y1="8" x2="10" y2="8"/>
-                </svg>
-                <span class="featured-label-text">As<br>Featured In</span>
-            </div>
-
-            <!-- Right: scrolling logo carousel -->
-            <div class="featured-carousel-wrap">
-                <div class="logo-carousel">
-
-                    <!-- === Original Set === -->
-                    <a href="#" class="logo-item" aria-label="Harvard Business Review"><span class="logo-name">Harvard Business Review</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="The New York Times"><span class="logo-name">The New York Times</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Forbes"><span class="logo-name">Forbes</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Inc."><span class="logo-name">Inc.</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Success"><span class="logo-name">Success</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="CEO World"><span class="logo-name">CEO World</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Thought Leader"><span class="logo-name">Thought Leader</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-
-                    <!-- === Duplicate Set for seamless loop === -->
-                    <a href="#" class="logo-item" aria-label="Harvard Business Review"><span class="logo-name">Harvard Business Review</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="The New York Times"><span class="logo-name">The New York Times</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Forbes"><span class="logo-name">Forbes</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Inc."><span class="logo-name">Inc.</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Success"><span class="logo-name">Success</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="CEO World"><span class="logo-name">CEO World</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-                    <a href="#" class="logo-item" aria-label="Thought Leader"><span class="logo-name">Thought Leader</span></a>
-                    <div class="logo-sep" aria-hidden="true"></div>
-
+    <!-- As Featured In — Centered Executive Brand Image Logos -->
+    <section class="featured-section-v2" aria-label="As featured in">
+        <div class="featured-inner-v2">
+            <div class="featured-grid-v2">
+                <div class="logo-wrapper flex items-center justify-center h-10">
+                    <img src="https://www.freepnglogos.com/uploads/forbes-logo-png/forbes-logos-black-png-download-7.png"
+                        alt="Forbes" class="logo-forbes-v2 object-contain grayscale opacity-85" />
+                </div>
+                <div class="logo-wrapper flex items-center justify-center h-10">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlkYIjYqlAb8Iz0H8Rwxht1PeRCdBotJJ3LIKJv-cA9g&s=10"
+                        alt="Harvard Business Review" class="logo-hbr-v2 object-contain grayscale opacity-85" />
+                </div>
+                <div class="logo-wrapper flex items-center justify-center h-10">
+                    <img src="https://help.entrepreneur.com/hs-fs/hubfs/Entrepreneur_Logo_Blk_Web.png?width=1080&height=254&name=Entrepreneur_Logo_Blk_Web.png"
+                        alt="Entrepreneur" class="logo-entrepreneur-v2 object-contain grayscale opacity-85" />
+                </div>
+                <div class="logo-wrapper flex items-center justify-center h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Inc._magazine_logo.png" alt="Inc."
+                        class="logo-inc-v2 object-contain grayscale opacity-85" />
+                </div>
+                <div class="logo-wrapper flex items-center justify-center h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Fast_Company_logo.svg/1280px-Fast_Company_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+                        alt="Fast Company" class="logo-fastcompany-v2 object-contain grayscale opacity-85" />
+                </div>
+                <div class="logo-wrapper flex items-center justify-center h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png"
+                        alt="The New York Times" class="logo-nyt-v2 object-contain grayscale opacity-85" />
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -2694,7 +2882,8 @@
     <section class="mind-the-gap" aria-labelledby="gap-heading">
         <div class="gap-header">
             <h2 id="gap-heading" class="gap-headline">Mind the Gap: Turning Experience into Authority</h2>
-            <p class="gap-subtext">The Authority Gap is the distance between what you know and what the market recognizes you for knowing.</p>
+            <p class="gap-subtext">The Authority Gap is the distance between what you know and what the market
+                recognizes you for knowing.</p>
         </div>
 
         <div class="gap-cards-container">
@@ -2713,7 +2902,8 @@
 
             <!-- Middle Arrow -->
             <div class="gap-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
@@ -2723,7 +2913,35 @@
             <div class="gap-card">
                 <div class="card-label">Structured Authority</div>
                 <div class="radar-image-wrapper">
-                    <img src="mick 2nd image.png" alt="Structured Authority Radar Chart" class="radar-image">
+                    <svg class="editorial-radar" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Grid rings -->
+                        <polygon class="radar-grid" points="150,40 230,85 230,175 150,220 70,175 70,85" />
+                        <polygon class="radar-grid" points="150,70 210,100 210,160 150,190 90,160 90,100" />
+                        <polygon class="radar-grid" points="150,100 190,115 190,145 150,160 110,145 110,115" />
+                        <!-- Axis lines -->
+                        <line class="radar-axis" x1="150" y1="130" x2="150" y2="40" />
+                        <line class="radar-axis" x1="150" y1="130" x2="230" y2="85" />
+                        <line class="radar-axis" x1="150" y1="130" x2="230" y2="175" />
+                        <line class="radar-axis" x1="150" y1="130" x2="150" y2="220" />
+                        <line class="radar-axis" x1="150" y1="130" x2="70" y2="175" />
+                        <line class="radar-axis" x1="150" y1="130" x2="70" y2="85" />
+                        <!-- Data shape -->
+                        <polygon class="radar-shape" points="150,52 222,92 218,168 150,200 82,155 88,88" />
+                        <!-- Data dots -->
+                        <circle class="radar-dot" cx="150" cy="52" r="3.5" />
+                        <circle class="radar-dot" cx="222" cy="92" r="3.5" />
+                        <circle class="radar-dot" cx="218" cy="168" r="3.5" />
+                        <circle class="radar-dot" cx="150" cy="200" r="3.5" />
+                        <circle class="radar-dot" cx="82" cy="155" r="3.5" />
+                        <circle class="radar-dot" cx="88" cy="88" r="3.5" />
+                        <!-- High-end HBR axis labels -->
+                        <text class="radar-label" x="150" y="26" text-anchor="middle">Credibility</text>
+                        <text class="radar-label" x="245" y="82" text-anchor="start">Scalability</text>
+                        <text class="radar-label" x="245" y="180" text-anchor="start">Influence</text>
+                        <text class="radar-label" x="150" y="242" text-anchor="middle">Legacy</text>
+                        <text class="radar-label" x="55" y="180" text-anchor="end">IP Architecture</text>
+                        <text class="radar-label" x="55" y="82" text-anchor="end">Market Positioning</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -2737,17 +2955,18 @@
                 <div class="audience-header">
                     <div class="audience-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 3a9 9 0 0 0-9 9c0 4.5 2 7 2 7h14s2-2.5 2-7a9 9 0 0 0-9-9z"/>
-                            <path d="M12 19v3"/>
-                            <path d="M15 19l2 3"/>
-                            <path d="M9 19l-2 3"/>
-                            <circle cx="12" cy="11" r="2"/>
+                            <path d="M12 3a9 9 0 0 0-9 9c0 4.5 2 7 2 7h14s2-2.5 2-7a9 9 0 0 0-9-9z" />
+                            <path d="M12 19v3" />
+                            <path d="M15 19l2 3" />
+                            <path d="M9 19l-2 3" />
+                            <circle cx="12" cy="11" r="2" />
                         </svg>
                     </div>
-                    <div class="audience-label">For Executives &amp; Senior Leaders</div>
+                    <div class="audience-label">Who This Is For</div>
                 </div>
-                <h3 class="audience-heading">Turn experience into influence that scales.</h3>
-                <p class="audience-body">Build a recognized authority platform that elevates your leadership, drives opportunities, and leaves a lasting legacy.</p>
+                <h3 class="audience-heading">For Accomplished Leaders who have outgrown their current platform.</h3>
+                <p class="audience-body">Positioning for leaders with 20+ years of accumulated experience who are ready
+                    to transform what they know into what the world recognizes and values.</p>
                 <div class="audience-pills">
                     <div class="audience-pill">Executive Visibility</div>
                     <div class="audience-pill">Thought Leadership</div>
@@ -2761,20 +2980,21 @@
                 <div class="audience-header">
                     <div class="audience-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="7" r="4"/>
-                            <path d="M12 11v6"/>
-                            <path d="M12 17l-5 5"/>
-                            <path d="M12 17l5 5"/>
-                            <path d="M12 14h-6"/>
-                            <circle cx="4" cy="14" r="2"/>
-                            <path d="M12 14h6"/>
-                            <circle cx="20" cy="14" r="2"/>
+                            <circle cx="12" cy="7" r="4" />
+                            <path d="M12 11v6" />
+                            <path d="M12 17l-5 5" />
+                            <path d="M12 17l5 5" />
+                            <path d="M12 14h-6" />
+                            <circle cx="4" cy="14" r="2" />
+                            <path d="M12 14h6" />
+                            <circle cx="20" cy="14" r="2" />
                         </svg>
                     </div>
-                    <div class="audience-label">For Consultants &amp; Experts</div>
+                    <div class="audience-label">The Right Fit</div>
                 </div>
-                <h3 class="audience-heading">Architect expertise into intellectual property.</h3>
-                <p class="audience-body">Systematize your methodology, protect your unique approach, and create a business that works with you.</p>
+                <h3 class="audience-heading">For Strategic Advisors &amp; Experts seeking proprietary positioning.</h3>
+                <p class="audience-body">Systematize your decades of expertise into a defensible methodology, protect
+                    your intellectual capital, and architect a market-leading authority platform.</p>
                 <div class="audience-pills">
                     <div class="audience-pill">Proprietary Frameworks</div>
                     <div class="audience-pill">Niche Authority</div>
@@ -2789,7 +3009,8 @@
     <section class="blueprint-section" aria-label="The Blueprint">
         <div class="blueprint-inner">
             <h2 class="blueprint-heading">The Blueprint: Your Path to Intellectual Property</h2>
-            <p class="blueprint-subtext">A proven three-phase framework to transform your expertise into market-recognized authority.</p>
+            <p class="blueprint-subtext">A proven three-phase framework to transform your expertise into
+                market-recognized authority.</p>
 
             <div class="blueprint-steps">
                 <!-- Step 1 -->
@@ -2797,12 +3018,12 @@
                     <div class="step-circle">01</div>
                     <div class="step-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"/>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
                         </svg>
                     </div>
                     <div class="step-title">Identify</div>
-                    <p class="step-desc">Uncover your unique insights and methodology potential hidden in your experience.</p>
+                    <p class="step-desc">Uncover hidden patterns and methodologies inside your experience.</p>
                 </div>
 
                 <div class="blueprint-connector" aria-hidden="true"></div>
@@ -2812,13 +3033,13 @@
                     <div class="step-circle">02</div>
                     <div class="step-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L3 6l9 4 9-4-9-4z"/>
-                            <path d="M3 11l9 4 9-4"/>
-                            <path d="M3 16l9 4 9-4"/>
+                            <path d="M12 2L3 6l9 4 9-4-9-4z" />
+                            <path d="M3 11l9 4 9-4" />
+                            <path d="M3 16l9 4 9-4" />
                         </svg>
                     </div>
                     <div class="step-title">Structure</div>
-                    <p class="step-desc">Organize your knowledge into a proprietary framework and proof system.</p>
+                    <p class="step-desc">Turn insights into a proprietary, defensible framework.</p>
                 </div>
 
                 <div class="blueprint-connector" aria-hidden="true"></div>
@@ -2828,17 +3049,17 @@
                     <div class="step-circle">03</div>
                     <div class="step-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 21h18"/>
-                            <path d="M4 21v-10"/>
-                            <path d="M20 21v-10"/>
-                            <path d="M8 21v-10"/>
-                            <path d="M12 21v-10"/>
-                            <path d="M16 21v-10"/>
-                            <path d="M2 11l10-7 10 7H2z"/>
+                            <path d="M3 21h18" />
+                            <path d="M4 21v-10" />
+                            <path d="M20 21v-10" />
+                            <path d="M8 21v-10" />
+                            <path d="M12 21v-10" />
+                            <path d="M16 21v-10" />
+                            <path d="M2 11l10-7 10 7H2z" />
                         </svg>
                     </div>
                     <div class="step-title">Architect</div>
-                    <p class="step-desc">Build your authority platform, protect your IP, and earn market recognition.</p>
+                    <p class="step-desc">Build the ecosystem (book, media, platform) that scales your influence.</p>
                 </div>
             </div>
 
@@ -2851,139 +3072,182 @@
         <div class="book-container">
             <div class="book-header">
                 <h2 id="book-heading" class="book-section-heading">Explore the Intellectual Capital</h2>
-                <p class="book-section-subtext">Books, frameworks, and conversations to help you build lasting authority.</p>
+                <p class="book-section-subtext">Books, frameworks, and conversations to help you build lasting
+                    authority.</p>
             </div>
 
-        <div class="book-card">
-            <div class="book-visual">
-                <img src="mick smith book.png" alt="The Authority Architecture Book Cover" class="book-cover">
-            </div>
-            <div class="book-content">
-                <span class="book-eyebrow">Featured Book</span>
-                <h3 class="book-title">The Authority Architecture</h3>
-                <p class="book-desc">A definitive guide to building, protecting, and leveraging intellectual property from your life's work.</p>
-                <p class="book-desc">This book gives you the architecture to transform what you know into what the world recognizes and values.</p>
-                
-                <ul class="book-bullets">
-                    <li class="book-bullet">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span><strong>Identify</strong> the intellectual property hidden inside your experience</span>
-                    </li>
-                    <li class="book-bullet">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span><strong>Structure it</strong> into a defensible, ownable framework</span>
-                    </li>
-                    <li class="book-bullet">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span><strong>Turn it into a platform</strong> that compounds your authority over time</span>
-                    </li>
-                </ul>
+            <div class="book-card">
+                <div class="book-visual">
+                    <img src="mick smith book.png" alt="The Authority Architecture Book Cover" class="book-cover">
+                </div>
+                <div class="book-content">
+                    <span class="book-eyebrow">Featured Book</span>
+                    <h3 class="book-title">The Authority Architecture</h3>
+                    <p class="book-desc">A definitive guide to building, protecting, and leveraging intellectual
+                        property from your life's work.</p>
+                    <p class="book-desc">This book gives you the architecture to transform what you know into what the
+                        world recognizes and values.</p>
 
-                <a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer" class="book-cta">Explore the Book <span>&rarr;</span></a>
+                    <ul class="book-bullets">
+                        <li class="book-bullet">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>Identify</strong> the intellectual property hidden inside your
+                                experience</span>
+                        </li>
+                        <li class="book-bullet">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>Structure it</strong> into a defensible, ownable framework</span>
+                        </li>
+                        <li class="book-bullet">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span><strong>Turn it into a platform</strong> that compounds your authority over
+                                time</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true"
+                        target="_blank" rel="noopener noreferrer" class="book-cta">Explore the Book
+                        <span>&rarr;</span></a>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
     <!-- Insights & Media Section -->
     <section class="insights-section" aria-label="Insights and Media">
         <div class="insights-container">
-            
-            <!-- Card 1: Essays -->
-            <div class="insights-card">
-                <div class="card-eyebrow">Key Insights &amp; Strategic Essays</div>
-                <ul class="essay-list">
-                    <li class="essay-item">
-                        <div class="essay-number">01</div>
-                        <a href="#" class="essay-link">Why Expertise Alone Doesn't Create Authority</a>
-                    </li>
-                    <li class="essay-item">
-                        <div class="essay-number">02</div>
-                        <a href="#" class="essay-link">The Intellectual Property Advantage in the AI Era</a>
-                    </li>
-                    <li class="essay-item">
-                        <div class="essay-number">03</div>
-                        <a href="#" class="essay-link">From Experience to Influence: The Architecture of Recognized Authority</a>
-                    </li>
-                </ul>
-                <a href="#" class="insights-cta">View All Insights &rarr;</a>
+
+            <!-- Flagship Video -->
+            <div class="flagship-video-block">
+                <div class="flagship-video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-f2cqMdxkhA?si=rjlo6ML-fwk7nyYs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <a href="https://www.youtube.com/@thedoctorofdigital/videos" target="_blank" rel="noopener noreferrer"
+                    class="flagship-video-link">View Full Archive on YouTube &rarr;</a>
             </div>
 
-            <!-- Card 2: Podcast -->
-            <div class="insights-card">
-                <div class="card-eyebrow">The Doctor of Digital Podcast</div>
-                
-                <div class="podcast-carousel-wrap">
-                    <div class="podcast-carousel">
-                        <!-- Slide 1 -->
-                        <div class="carousel-slide">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/bQ3ERurAT5Q" title="Dr. Mick Smith - Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            <!-- 3 Value Pillars -->
+            <div class="value-pillars">
+                <div class="value-pillar">
+                    <div class="value-pillar-title">I See What You Don't Yet See.</div>
+                    <div class="value-pillar-dash"></div>
+                    <p class="value-pillar-text">I uncover the ideas and patterns hidden inside your experience.</p>
+                </div>
+                <div class="value-pillar">
+                    <div class="value-pillar-title">I Extract the Methodology.</div>
+                    <div class="value-pillar-dash"></div>
+                    <p class="value-pillar-text">I turn those experiences into frameworks and intellectual property.</p>
+                </div>
+                <div class="value-pillar">
+                    <div class="value-pillar-title">I Build the Authority Asset.</div>
+                    <div class="value-pillar-dash"></div>
+                    <p class="value-pillar-text">I help turn that intellectual capital into a book and platform that
+                        creates opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Relocated directly before Authority Mindset) -->
+    <section class="testimonials-section" aria-label="Testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2 class="testimonials-heading">What Industry Leaders Say About Working With Dr. Mick</h2>
+                <div class="testimonials-divider">
+                    <div class="testimonials-divider-line"></div>
+                    <div class="testimonials-divider-dot"></div>
+                    <div class="testimonials-divider-line"></div>
+                </div>
+            </div>
+
+            <div class="testimonials-carousel-wrap">
+                <button class="t-carousel-btn prev" aria-label="Previous review">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+
+                <div class="testimonials-track">
+                    <!-- Card 1: Executive & 5x Bestselling Author -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://ui-avatars.com/api/?name=J+W&background=20262B&color=C89B3C&size=100&font-size=0.4&bold=true"
+                                    alt="Executive Author" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Executive &amp; 5x Bestselling Author</h4>
+                                    <p class="testimonial-title">C-Suite Leader</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <!-- Slide 2 -->
-                        <div class="carousel-slide">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/H4Cifd8CCw4" title="Dr. Mick Smith - Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 3 -->
-                        <div class="carousel-slide">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/aXHpeak81AQ" title="Dr. Mick Smith - Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 4 -->
-                        <div class="carousel-slide">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/AijMYTRwMYo" title="Dr. Mick Smith - Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 5 -->
-                        <div class="carousel-slide">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/6VGMmVvL3jo" title="Dr. Mick Smith - Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 6 -->
-                        <div class="carousel-slide">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/voio0aNybjw" title="Dr. Mick Smith - Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-controls">
-                        <button class="carousel-btn prev" aria-label="Previous video">
-                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-                        </button>
-                        <button class="carousel-btn next" aria-label="Next video">
-                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-                        </button>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">Mick doesn't just help you write a book — he architects an entire
+                            authority platform around your intellectual capital. He saw patterns in my 25 years of
+                            experience that I couldn't see myself, and turned them into a framework that now drives my
+                            entire business strategy.</p>
                     </div>
 
-                    <div class="carousel-indicators">
-                        <div class="carousel-dot active"></div>
-                        <div class="carousel-dot"></div>
-                        <div class="carousel-dot"></div>
-                        <div class="carousel-dot"></div>
-                        <div class="carousel-dot"></div>
-                        <div class="carousel-dot"></div>
+                    <!-- Card 2: Harvard-Trained Strategist -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://ui-avatars.com/api/?name=S+R&background=1E3A5F&color=fff&size=100&font-size=0.4&bold=true"
+                                    alt="Harvard Strategist" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">Harvard-Trained Strategist</h4>
+                                    <p class="testimonial-title">Strategic Advisory</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">What separates Mick is his ability to extract methodology from
+                            experience. He doesn't do surface-level personal branding — he builds defensible
+                            intellectual property. The framework he helped me develop has become the foundation of
+                            everything I do professionally.</p>
+                    </div>
+
+                    <!-- Card 3: CEO & Global Brand Consultant -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-author">
+                                <img src="https://ui-avatars.com/api/?name=M+K&background=8C3B1B&color=fff&size=100&font-size=0.4&bold=true"
+                                    alt="CEO Brand Consultant" class="testimonial-avatar">
+                                <div>
+                                    <h4 class="testimonial-name">CEO &amp; Global Brand Consultant</h4>
+                                    <p class="testimonial-title">Brand Strategy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="testimonial-quote-mark">"</span>
+                        <p class="testimonial-text">I've worked with dozens of consultants over my career. Mick is the
+                            only one who understood that authority isn't claimed — it's built through architecture. He
+                            helped me see that my decades of experience were an unstructured gold mine, and he gave me
+                            the blueprint to extract it.</p>
                     </div>
                 </div>
 
-                <a href="https://www.youtube.com/@thedoctorofdigital/videos" target="_blank" rel="noopener noreferrer" class="insights-cta">Watch on YouTube &rarr;</a>
+                <button class="t-carousel-btn next" aria-label="Next review">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="t-carousel-indicators">
+                <div class="t-carousel-dot active"></div>
+                <div class="t-carousel-dot"></div>
+                <div class="t-carousel-dot"></div>
             </div>
         </div>
     </section>
@@ -2992,7 +3256,7 @@
     <section class="mindset-section" aria-label="The Authority Mindset">
         <div class="mindset-container">
             <h2 class="mindset-heading">The Authority Mindset</h2>
-            
+
             <div class="mindset-flow">
                 <!-- Step 1 -->
                 <div class="mindset-step">
@@ -3000,7 +3264,9 @@
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M9 18h6"></path>
                             <path d="M10 22h4"></path>
-                            <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 12 3.5a4.65 4.65 0 0 0-4.5 8c.76.76 1.23 1.52 1.41 2.5"></path>
+                            <path
+                                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 12 3.5a4.65 4.65 0 0 0-4.5 8c.76.76 1.23 1.52 1.41 2.5">
+                            </path>
                         </svg>
                     </div>
                     <div class="mindset-label">Experience</div>
@@ -3074,154 +3340,29 @@
                 <div class="cta-icon-circle" aria-hidden="true">
                     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5"></path>
-                        <path d="M12 15l-3-3a22 22 0 0 1-1.34-11.34A2 2 0 0 1 9.5 1.5c1.1.2 5.5.9 8.5 3.9s3.7 7.4 3.9 8.5a2 2 0 0 1-1.16 1.84c-1.1.5-3.5 1-6.14.76"></path>
+                        <path
+                            d="M12 15l-3-3a22 22 0 0 1-1.34-11.34A2 2 0 0 1 9.5 1.5c1.1.2 5.5.9 8.5 3.9s3.7 7.4 3.9 8.5a2 2 0 0 1-1.16 1.84c-1.1.5-3.5 1-6.14.76">
+                        </path>
                         <path d="M15 9a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"></path>
                     </svg>
                 </div>
                 <h2 class="cta-heading">You already have the experience.<br>Now build the architecture.</h2>
-                <p class="cta-subtext">Your expertise deserves more than a résumé.<br>It deserves recognition, protection, and impact.</p>
+                <p class="cta-subtext">Phase One is a high-level strategic audit designed exclusively for leaders with
+                    significant accumulated intellectual capital.</p>
                 <a href="#" class="cta-button">Apply for Phase One Blueprint &rarr;</a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section" aria-label="Testimonials">
-        <div class="testimonials-container">
-            <div class="testimonials-header">
-                <h2 class="testimonials-heading">What Industry Leaders Say About Working With Dr. Mick</h2>
-                <div class="testimonials-divider">
-                    <div class="testimonials-divider-line"></div>
-                    <div class="testimonials-divider-dot"></div>
-                    <div class="testimonials-divider-line"></div>
-                </div>
-            </div>
 
-            <div class="testimonials-carousel-wrap">
-                <button class="t-carousel-btn prev" aria-label="Previous review">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-
-                <div class="testimonials-track">
-                    <!-- Card 1: Rachel Radway -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-author">
-                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGYdyB-cBSHpA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1702582293321?e=1788998400&v=beta&t=RZD3GNvlr-YMyb8yRS45-cIHaDiYPcUcD60C2vDIXU8" alt="Rachel Radway" class="testimonial-avatar">
-                                <div>
-                                    <h4 class="testimonial-name">Rachel Radway, PCC</h4>
-                                    <p class="testimonial-title">Executive &amp; Leadership Coach</p>
-                                </div>
-                            </div>
-                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </div>
-                        <span class="testimonial-quote-mark">"</span>
-                        <p class="testimonial-text">Mick doesn't do surface-level interviews. He listens, reflects, and asks questions that invite clarity rather than performance. If you're writing a book that carries weight and your goal is long-term impact, Mick is a strategic thought partner who'll take both you and your message seriously.</p>
-                    </div>
-
-                    <!-- Card 2: Ben Shaw -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-author">
-                                <img src="https://ui-avatars.com/api/?name=Ben+Shaw&background=1E3A5F&color=fff&size=100&font-size=0.4" alt="Ben Shaw" class="testimonial-avatar">
-                                <div>
-                                    <h4 class="testimonial-name">Ben Shaw, PhD</h4>
-                                    <p class="testimonial-title">President @ CORE | Author</p>
-                                </div>
-                            </div>
-                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </div>
-                        <span class="testimonial-quote-mark">"</span>
-                        <p class="testimonial-text">Mick was a wonderful host who gave an incredibly warm and kind introduction. He genuinely listened in our discussion, which led to him asking excellent questions of both character and content. He did a fantastic job of keeping us on point and on time.</p>
-                    </div>
-
-                    <!-- Card 3: Vladimir Bushin -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-author">
-                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGSg12GxolTog/profile-displayphoto-scale_100_100/B4EZ6dSXdMIwAY-/0/1780755299695?e=1788998400&v=beta&t=i5OrqfrQMfHvI0CdrdG3XGG_VDgGyOnlwajm6H1yYeU" alt="Vladimir Bushin" class="testimonial-avatar">
-                                <div>
-                                    <h4 class="testimonial-name">Vladimir Bushin</h4>
-                                    <p class="testimonial-title">Agentic AI Leader for SMBs</p>
-                                </div>
-                            </div>
-                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </div>
-                        <span class="testimonial-quote-mark">"</span>
-                        <p class="testimonial-text">What stood out most was Mick's ability to create a space where ideas aren't just discussed — they're clarified and sharpened into practical strategies. If you're an author aiming to transform a good idea into a credible book, Mick is the partner you want in your corner.</p>
-                    </div>
-
-                    <!-- Card 4: Kim Sorrelle -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-author">
-                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQEZe1h6kp5Lyg/profile-displayphoto-scale_100_100/B4EZ.4iKQHIAAc-/0/1785507393412?e=1788998400&v=beta&t=YesYvX2Z0ShcRWv8FgDeI1oporDG5FIT0d5miht7FKU" alt="Kim Sorrelle" class="testimonial-avatar">
-                                <div>
-                                    <h4 class="testimonial-name">Kim Sorrelle</h4>
-                                    <p class="testimonial-title">Keynote Speaker &amp; Author</p>
-                                </div>
-                            </div>
-                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </div>
-                        <span class="testimonial-quote-mark">"</span>
-                        <p class="testimonial-text">Mick isn't just a brilliant host — he's a true listener. He draws out your purpose, aligns it with his insight, and elevates it in a way that makes you think, "Yes, that's what I've been trying to say." His insight into book strategy and soul-aligned storytelling is unmatched.</p>
-                    </div>
-
-                    <!-- Card 5: Ral West -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-author">
-                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGcVuxvw7lFKA/profile-displayphoto-scale_100_100/B4EZ0senEoHAAc-/0/1774567715533?e=1788998400&v=beta&t=1R1UZsnsvOb4UqI6h_2WYbxeNqxUJ1hmrMDgk-cGO18" alt="Ral West" class="testimonial-avatar">
-                                <div>
-                                    <h4 class="testimonial-name">Ral West</h4>
-                                    <p class="testimonial-title">Bestselling Author &amp; Serial Entrepreneur</p>
-                                </div>
-                            </div>
-                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </div>
-                        <span class="testimonial-quote-mark">"</span>
-                        <p class="testimonial-text">Mick is a skilled podcast host who naturally draws out conversations that serve his audience well. He has a true talent for helping visionaries turn their ideas into powerful, authority-building books — an invaluable partner for coaches, consultants, and executives alike.</p>
-                    </div>
-
-                    <!-- Card 6: Daniel Lucas -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-author">
-                                <img src="https://media.licdn.com/dms/image/v2/D5603AQG3tRXopz0OZA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1718910951089?e=1788998400&v=beta&t=l8Zf7GoVbAwNaRiT7SafVbvaxh0Ns5HH447aELRyNGk" alt="Daniel Lucas" class="testimonial-avatar">
-                                <div>
-                                    <h4 class="testimonial-name">Daniel Lucas</h4>
-                                    <p class="testimonial-title">Podcast Host &amp; Producer</p>
-                                </div>
-                            </div>
-                            <svg class="testimonial-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        </div>
-                        <span class="testimonial-quote-mark">"</span>
-                        <p class="testimonial-text">Mick creates a unique blend of expertise and authenticity that elevates every single episode. He brings fresh perspectives that challenge conventional thinking and consistently delivers insights that genuinely impact lives. It's an honor to share the mic with him!</p>
-                    </div>
-                </div>
-
-                <button class="t-carousel-btn next" aria-label="Next review">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-            </div>
-
-            <div class="t-carousel-indicators">
-                <div class="t-carousel-dot active"></div>
-                <div class="t-carousel-dot"></div>
-                <div class="t-carousel-dot"></div>
-                <div class="t-carousel-dot"></div>
-                <div class="t-carousel-dot"></div>
-                <div class="t-carousel-dot"></div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer Section -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-quote-block">
                 <span class="footer-quote-icon">"</span>
-                <p class="footer-quote-text">Authority isn't claimed — it's architected. When you build the right structure, your impact compounds, your influence scales, and your legacy lasts.</p>
+                <p class="footer-quote-text">Authority isn't claimed — it's architected. When you build the right
+                    structure, your impact compounds, your influence scales, and your legacy lasts.</p>
                 <div class="footer-quote-author">&mdash; G. Mick Smith, PhD</div>
             </div>
 
@@ -3232,24 +3373,30 @@
                 <div class="footer-brand">
                     <h3>G. MICK SMITH, PHD</h3>
                     <div class="footer-brand-subtitle">Authority Architect</div>
-                    <p class="footer-brand-desc">I help executives, leaders, and experts transform experience into intellectual property that creates market-leading authority and lasting impact.</p>
+                    <p class="footer-brand-desc">I help executives, leaders, and experts transform experience into
+                        intellectual property that creates market-leading authority and lasting impact.</p>
                     <div class="footer-social">
                         <a href="#" class="footer-social-icon" aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" class="stroke-icon">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
                                 <rect x="2" y="9" width="4" height="12"></rect>
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
                         </a>
                         <a href="#" class="footer-social-icon" aria-label="YouTube">
                             <svg viewBox="0 0 24 24" class="stroke-icon">
-                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                                </path>
                                 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                             </svg>
                         </a>
                         <a href="#" class="footer-social-icon" aria-label="Email">
                             <svg viewBox="0 0 24 24" class="stroke-icon">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                         </a>
@@ -3262,7 +3409,8 @@
                     <ul class="footer-nav-list">
                         <li><a href="#">Authority Gap</a></li>
                         <li><a href="#">Blueprint</a></li>
-                        <li><a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Books</a></li>
+                        <li><a href="https://www.amazon.com/stores/G-Mick-Smith/author/B0B59X5R79?ref=ap_rdr&shoppingPortalEnabled=true"
+                                target="_blank" rel="noopener noreferrer">Books</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Insights</a></li>
                     </ul>
@@ -3300,13 +3448,13 @@
             // Hamburger Menu Logic
             const hamburger = document.getElementById('headerHamburger');
             const mobileNav = document.getElementById('mobileNavOverlay');
-            
+
             if (hamburger && mobileNav) {
                 hamburger.addEventListener('click', () => {
                     hamburger.classList.toggle('active');
                     mobileNav.classList.toggle('open');
                 });
-                
+
                 // Close menu when clicking a link
                 mobileNav.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
@@ -3326,7 +3474,7 @@
                 podPrev.addEventListener('click', () => {
                     podCarousel.scrollBy({ left: -podCarousel.clientWidth, behavior: 'smooth' });
                 });
-                
+
                 podNext.addEventListener('click', () => {
                     podCarousel.scrollBy({ left: podCarousel.clientWidth, behavior: 'smooth' });
                 });
@@ -3350,7 +3498,7 @@
                     // Scroll by roughly one card width
                     tTrack.scrollBy({ left: -400, behavior: 'smooth' });
                 });
-                
+
                 tNext.addEventListener('click', () => {
                     tTrack.scrollBy({ left: 400, behavior: 'smooth' });
                 });
@@ -3358,14 +3506,14 @@
                 tTrack.addEventListener('scroll', () => {
                     const maxScroll = tTrack.scrollWidth - tTrack.clientWidth;
                     if (maxScroll <= 0) return;
-                    
+
                     const scrollFraction = tTrack.scrollLeft / maxScroll;
                     const numDots = tDots.length;
-                    
+
                     let index = Math.round(scrollFraction * (numDots - 1));
-                    if(index < 0) index = 0;
-                    if(index >= numDots) index = numDots - 1;
-                    
+                    if (index < 0) index = 0;
+                    if (index >= numDots) index = numDots - 1;
+
                     tDots.forEach((dot, i) => {
                         dot.classList.toggle('active', i === index);
                     });
@@ -3376,88 +3524,91 @@
 
     <!-- Scroll Animation Engine (Intersection Observer - Zero Dependencies) -->
     <script>
-    (function() {
-        // Respect reduced motion preference
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        (function () {
+            // Respect reduced motion preference
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-        // Helper: add animation class to elements
-        function tagElements(selector, animClass) {
-            document.querySelectorAll(selector).forEach(function(el) {
-                if (!el.classList.contains(animClass)) {
-                    el.classList.add(animClass);
-                }
-            });
-        }
-
-        // 1. Text Reveal — Headings, eyebrows, paragraphs
-        tagElements([
-            '.hero-headline', '.hero-body', '.hero-tag-line',
-            '.gap-headline', '.gap-subtext',
-            '.audience-heading',
-            '.blueprint-heading', '.blueprint-subtext',
-            '.book-section-heading', '.book-section-subtext',
-            '.insights-heading',
-            '.mindset-heading',
-            '.cta-heading', '.cta-subtext',
-            '.testimonials-heading',
-            '.card-eyebrow', '.book-eyebrow',
-            '.footer-quote-text', '.footer-attribution'
-        ].join(','), 'anim-fade-up');
-
-        // 2. Staggered cards & grid items
-        tagElements([
-            '.gap-card', '.audience-card',
-            '.blueprint-step', '.blueprint-connector',
-            '.mindset-step', '.mindset-connector',
-            '.insights-card',
-            '.book-card',
-            '.testimonial-card',
-            '.essay-item',
-            '.book-bullet'
-        ].join(','), 'anim-stagger');
-
-        // 3. Hero portrait scale-in
-        tagElements('.hero-portrait-wrapper, .hero-image, .hero-portrait', 'anim-scale-in');
-
-        // 4. CTA buttons
-        tagElements([
-            '.hero-cta', '.blueprint-cta', '.book-cta', '.cta-button', '.insights-cta',
-            '.btn', '.header-cta'
-        ].join(','), 'anim-cta');
-
-        // 5. Line dividers
-        tagElements('.featured-divider, .gold-divider', 'anim-line');
-
-        // Intersection Observer — fires once per element
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    // For staggered items, calculate delay based on sibling index
-                    var el = entry.target;
-                    if (el.classList.contains('anim-stagger')) {
-                        var parent = el.parentElement;
-                        var siblings = parent ? Array.from(parent.children).filter(function(c) {
-                            return c.classList.contains('anim-stagger');
-                        }) : [];
-                        var idx = siblings.indexOf(el);
-                        if (idx > 0) {
-                            el.style.transitionDelay = (idx * 0.15) + 's';
-                        }
+            // Helper: add animation class to elements
+            function tagElements(selector, animClass) {
+                document.querySelectorAll(selector).forEach(function (el) {
+                    if (!el.classList.contains(animClass)) {
+                        el.classList.add(animClass);
                     }
-                    el.classList.add('is-visible');
-                    observer.unobserve(el); // once: true
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -15% 0px' // triggers at bottom 15% of viewport
-        });
+                });
+            }
 
-        // Observe all animated elements
-        document.querySelectorAll('.anim-fade-up, .anim-stagger, .anim-scale-in, .anim-cta, .anim-line').forEach(function(el) {
-            observer.observe(el);
-        });
-    })();
+            // 1. Text Reveal — Headings, eyebrows, paragraphs
+            tagElements([
+                '.hero-headline', '.hero-body', '.hero-tag-line',
+                '.gap-headline', '.gap-subtext',
+                '.audience-heading',
+                '.blueprint-heading', '.blueprint-subtext',
+                '.book-section-heading', '.book-section-subtext',
+                '.insights-heading',
+                '.mindset-heading',
+                '.cta-heading', '.cta-subtext',
+                '.testimonials-heading',
+                '.card-eyebrow', '.book-eyebrow',
+                '.footer-quote-text', '.footer-attribution'
+            ].join(','), 'anim-fade-up');
+
+            // 2. Staggered cards & grid items
+            tagElements([
+                '.gap-card', '.audience-card',
+                '.blueprint-step', '.blueprint-connector',
+                '.mindset-step', '.mindset-connector',
+                '.insights-card',
+                '.book-card',
+                '.testimonial-card',
+                '.essay-item',
+                '.book-bullet'
+            ].join(','), 'anim-stagger');
+
+            // 3. Hero portrait scale-in
+            tagElements('.hero-portrait-wrapper, .hero-image, .hero-portrait', 'anim-scale-in');
+
+            // 4. CTA buttons
+            tagElements([
+                '.hero-cta', '.blueprint-cta', '.book-cta', '.cta-button', '.insights-cta',
+                '.btn', '.header-cta'
+            ].join(','), 'anim-cta');
+
+            // 5. Line dividers
+            tagElements('.featured-divider, .gold-divider', 'anim-line');
+
+            // Intersection Observer — fires once per element
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        // For staggered items, calculate delay based on sibling index
+                        var el = entry.target;
+                        if (el.classList.contains('anim-stagger')) {
+                            var parent = el.parentElement;
+                            var siblings = parent ? Array.from(parent.children).filter(function (c) {
+                                return c.classList.contains('anim-stagger');
+                            }) : [];
+                            var idx = siblings.indexOf(el);
+                            if (idx > 0) {
+                                el.style.transitionDelay = (idx * 0.08) + 's';
+                            }
+                        }
+                        if (el.classList.contains('anim-cta')) {
+                            el.style.transitionDelay = '0s';
+                        }
+                        el.classList.add('is-visible');
+                        observer.unobserve(el); // once: true
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -15% 0px' // triggers at bottom 15% of viewport
+            });
+
+            // Observe all animated elements
+            document.querySelectorAll('.anim-fade-up, .anim-stagger, .anim-scale-in, .anim-cta, .anim-line').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
     </script>
 
 </body>
