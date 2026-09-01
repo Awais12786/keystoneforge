@@ -1231,6 +1231,391 @@
         }
 
         /* ==========================================================================
+           9b. Phase One: Strategic Authority Audit (Full Overhaul)
+           ========================================================================== */
+        .phase-one-section {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1E3A5F 100%);
+            padding: 100px 0 110px;
+            color: var(--color-white);
+            width: 100%;
+        }
+
+        .phase-one-inner {
+            max-width: 980px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        .phase-one-eyebrow {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .phase-one-headline {
+            font-family: var(--font-heading);
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 1.25;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 14px;
+        }
+
+        .phase-one-title {
+            font-family: var(--font-body);
+            font-style: italic;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .phase-one-block {
+            margin-bottom: 56px;
+        }
+
+        .phase-one-block-title {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--color-gold);
+            margin-bottom: 16px;
+        }
+
+        .phase-one-block-intro,
+        .phase-one-block p {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 16px;
+        }
+
+        .phase-one-process {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .phase-one-process-item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            background: rgba(18, 30, 43, 0.78);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-left: 2px solid var(--color-gold);
+            border-radius: 16px;
+            padding: 24px 22px 20px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            min-height: 100%;
+        }
+
+        .phase-one-process-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+        }
+
+        .phase-one-process-num {
+            font-family: var(--font-heading);
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--color-gold);
+            min-width: 28px;
+            display: inline-block;
+        }
+
+        .phase-one-process-copy {
+            width: 100%;
+        }
+
+        .phase-one-process-copy h4 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 8px;
+        }
+
+        .phase-one-process-copy p {
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.78);
+            margin-bottom: 0;
+        }
+
+        .phase-one-feature-card {
+            background: #0D1724;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+            overflow: hidden;
+        }
+
+        .phase-one-feature-inner {
+            display: grid;
+            grid-template-columns: 0.92fr 1.68fr;
+            gap: 0;
+            min-height: 100%;
+            background: #101A26;
+        }
+
+        .phase-one-feature-asset {
+            position: relative;
+            padding: 42px 32px 38px;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .phase-one-feature-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .phase-one-asset-mark {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            font-size: 14px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .phase-one-feature-tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            line-height: 1.2;
+        }
+
+        .phase-one-feature-asset h3 {
+            font-family: var(--font-heading);
+            font-size: 30px;
+            line-height: 1.15;
+            color: var(--color-white);
+            margin: 0 0 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .phase-one-feature-asset p {
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.78);
+            margin: 0;
+        }
+
+        .phase-one-feature-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .phase-one-feature-list li {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 18px;
+            align-items: flex-start;
+            padding: 24px 28px 24px 26px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 0;
+        }
+
+        .phase-one-feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .phase-one-item-num {
+            width: 30px;
+            height: 30px;
+            border-radius: 999px;
+            border: 1px solid rgba(212, 175, 55, 0.24);
+            background: rgba(212, 175, 55, 0.04);
+            color: rgba(212, 175, 55, 0.85);
+            font-family: var(--font-heading);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+            padding-left: 1px;
+        }
+
+        .phase-one-item-content {
+            display: block;
+        }
+
+        .phase-one-item-title {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-white);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .phase-one-item-subtitle {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.75);
+            margin-bottom: 10px;
+        }
+
+        .phase-one-item-content p {
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.78);
+            margin: 0;
+        }
+
+        .phase-one-deliverables {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .phase-one-deliverable {
+            display: block;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            min-height: auto;
+        }
+
+        .phase-one-mandatory {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 40px 0;
+        }
+
+        .phase-one-mandatory p {
+            font-family: var(--font-body);
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.85);
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .phase-one-engagement {
+            text-align: center;
+            padding-top: 56px;
+        }
+
+        .phase-one-investment {
+            font-family: var(--font-heading);
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 8px;
+        }
+
+        .phase-one-prereq {
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 32px;
+        }
+
+        .phase-one-next-steps {
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+
+        .phase-one-cta {
+            background-color: var(--color-ember);
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .phase-one-cta:hover {
+            background-color: #7a3217;
+        }
+
+        .phase-one-cta-subtext {
+            font-family: var(--font-body);
+            font-style: italic;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .phase-one-headline {
+                font-size: 26px;
+            }
+
+            .phase-one-title {
+                font-size: 16px;
+                margin-bottom: 48px;
+            }
+
+            .phase-one-process {
+                grid-template-columns: 1fr;
+            }
+
+            .phase-one-deliverables {
+                grid-template-columns: 1fr;
+            }
+
+            .phase-one-process-item {
+                gap: 10px;
+            }
+        }
+
+        /* ==========================================================================
            10. Book Showcase Section
            ========================================================================== */
         .book-section {
@@ -2831,7 +3216,7 @@
                         Explore Your Authority Gap &rarr;
                     </a>
                     <a href="#" class="hero-text-link">
-                        See How Phase One Works
+                        See What Phase One Reveals
                     </a>
                 </div>
             </div>
@@ -3006,64 +3391,139 @@
     </section>
 
     <!-- The Blueprint Section -->
-    <section class="blueprint-section" id="phase-one" aria-label="The Blueprint">
-        <div class="blueprint-inner">
-            <h2 class="blueprint-heading">The Blueprint: Your Path to Intellectual Property</h2>
-            <p class="blueprint-subtext">A proven three-phase framework to transform your expertise into
-                market-recognized authority.</p>
+    <section class="phase-one-section" id="phase-one" aria-label="Phase One: The Strategic Authority Audit">
+        <div class="phase-one-inner">
 
-            <div class="blueprint-steps">
-                <!-- Step 1 -->
-                <div class="blueprint-step">
-                    <div class="step-circle">01</div>
-                    <div class="step-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8" />
-                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                        </svg>
+            <span class="phase-one-eyebrow">Phase One: The Strategic Authority Audit</span>
+            <h2 class="phase-one-headline">Before You Write the Book, Determine What You Actually Have.</h2>
+            <p class="phase-one-title">A $2,500 standalone strategic audit — not step one of a funnel.</p>
+
+            <!-- Section 1: The Objective -->
+            <div class="phase-one-block">
+                <h3 class="phase-one-block-title">Solve the &ldquo;Unstructured Gold Mine&rdquo; Problem</h3>
+                <p>Most accomplished leaders possess decades of high-level experience but lack the proprietary
+                    methodology that turns that experience into a defensible asset. Phase One is not a
+                    &ldquo;consultation&rdquo; or a &ldquo;book-coaching package&rdquo;&mdash;it is a rigorous,
+                    forensic extraction process designed to bridge the gap between what you know and what the market
+                    recognizes you for.</p>
+            </div>
+
+            <!-- Section 2: How It Works -->
+            <div class="phase-one-block">
+                <h3 class="phase-one-block-title">How It Works: The Extraction &amp; Architecture Process</h3>
+                <p class="phase-one-block-intro">Over weekly engagements, we move through a structured diagnostic to
+                    identify the intellectual property you&rsquo;ve already created but haven&rsquo;t yet codified.
+                </p>
+
+                <div class="phase-one-process">
+                    <div class="phase-one-process-item">
+                        <span class="phase-one-process-num">01</span>
+                        <div class="phase-one-process-copy">
+                            <h4>The Intellectual Property Audit</h4>
+                            <p>We conduct a deep-dive forensic analysis of your 20+ years of experience. We look for
+                                &ldquo;Hidden Patterns&rdquo;&mdash;the unique ways you solve problems that you
+                                currently do instinctively.</p>
+                        </div>
                     </div>
-                    <div class="step-title">Identify</div>
-                    <p class="step-desc">Uncover hidden patterns and methodologies inside your experience.</p>
-                </div>
-
-                <div class="blueprint-connector" aria-hidden="true"></div>
-
-                <!-- Step 2 -->
-                <div class="blueprint-step">
-                    <div class="step-circle">02</div>
-                    <div class="step-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L3 6l9 4 9-4-9-4z" />
-                            <path d="M3 11l9 4 9-4" />
-                            <path d="M3 16l9 4 9-4" />
-                        </svg>
+                    <div class="phase-one-process-item">
+                        <span class="phase-one-process-num">02</span>
+                        <div class="phase-one-process-copy">
+                            <h4>Methodology Extraction</h4>
+                            <p>We move from &ldquo;what you do&rdquo; to &ldquo;how it works.&rdquo; We extract the
+                                underlying logic of your success (Story &rarr; Pattern &rarr; Principle &rarr;
+                                Framework) to create a system that you&mdash;and only you&mdash;own.</p>
+                        </div>
                     </div>
-                    <div class="step-title">Structure</div>
-                    <p class="step-desc">Turn insights into a proprietary, defensible framework.</p>
-                </div>
-
-                <div class="blueprint-connector" aria-hidden="true"></div>
-
-                <!-- Step 3 -->
-                <div class="blueprint-step">
-                    <div class="step-circle">03</div>
-                    <div class="step-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 21h18" />
-                            <path d="M4 21v-10" />
-                            <path d="M20 21v-10" />
-                            <path d="M8 21v-10" />
-                            <path d="M12 21v-10" />
-                            <path d="M16 21v-10" />
-                            <path d="M2 11l10-7 10 7H2z" />
-                        </svg>
+                    <div class="phase-one-process-item">
+                        <span class="phase-one-process-num">03</span>
+                        <div class="phase-one-process-copy">
+                            <h4>The Authority Gap Analysis</h4>
+                            <p>We map the distance between your current market positioning and your maximum
+                                intellectual potential, identifying where your influence is leaking and where your
+                                capital is unprotected.</p>
+                        </div>
                     </div>
-                    <div class="step-title">Architect</div>
-                    <p class="step-desc">Build the ecosystem (book, media, platform) that scales your influence.</p>
+                    <div class="phase-one-process-item">
+                        <span class="phase-one-process-num">04</span>
+                        <div class="phase-one-process-copy">
+                            <h4>Strategic Roadmap</h4>
+                            <p>We determine the trajectory of your &ldquo;Authority Ecosystem.&rdquo; This isn&rsquo;t
+                                just about a book; it&rsquo;s about the structural plan for your platform, media
+                                strategy, and intellectual property compounding.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <a href="#" class="blueprint-cta">Apply for Phase One Blueprint &rarr;</a>
+            <!-- Section 3: The Deliverable -->
+            <div class="phase-one-block">
+                <div class="phase-one-feature-card">
+                    <div class="phase-one-feature-inner">
+                        <div class="phase-one-feature-asset">
+                            <div class="phase-one-feature-header">
+                                <div class="phase-one-asset-mark">◆</div>
+                                <div class="phase-one-feature-tag">THE DELIVERABLE</div>
+                            </div>
+                            <h3>The Authority Blueprint</h3>
+                            <p>At the conclusion of Phase One, you receive the Authority Blueprint. This foundational
+                                document ensures that you aren&rsquo;t just &ldquo;creating content,&rdquo; but building
+                                a category-defining asset.</p>
+                        </div>
+
+                        <ul class="phase-one-feature-list">
+                            <li class="phase-one-deliverable">
+                                <span class="phase-one-item-num">01</span>
+                                <div class="phase-one-item-content">
+                                    <span class="phase-one-item-subtitle">Strategic Asset</span>
+                                    <span class="phase-one-item-title">Your Authority Map</span>
+                                    <p>A visual representation of your hidden IP organized into a defensible framework.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="phase-one-deliverable">
+                                <span class="phase-one-item-num">02</span>
+                                <div class="phase-one-item-content">
+                                    <span class="phase-one-item-subtitle">Market Positioning</span>
+                                    <span class="phase-one-item-title">Positioning Statement</span>
+                                    <p>The market-facing articulation of your unique approach.</p>
+                                </div>
+                            </li>
+                            <li class="phase-one-deliverable">
+                                <span class="phase-one-item-num">03</span>
+                                <div class="phase-one-item-content">
+                                    <span class="phase-one-item-subtitle">Growth Architecture</span>
+                                    <span class="phase-one-item-title">Platform Architecture</span>
+                                    <p>A 12-month roadmap for your book, media presence, and business infrastructure.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Why Phase One is Mandatory -->
+            <div class="phase-one-mandatory">
+                <p>You cannot build a skyscraper on a residential foundation. Most &ldquo;thought
+                    leadership&rdquo; fails because it lacks structural integrity. Phase One provides the
+                    architectural rigor required to ensure your platform can support the weight of your legacy and
+                    the scale of your future opportunities. It is the strategic work that must happen before the
+                    book.</p>
+            </div>
+
+            <!-- Section 5: Engagement Details & Call to Action -->
+            <div class="phase-one-engagement">
+                <div class="phase-one-investment">Investment: $2,500</div>
+                <p class="phase-one-prereq">Designed for leaders with a minimum of 15&ndash;20 years of professional
+                    experience.</p>
+                <p class="phase-one-next-steps">Upon completion, you may choose to move into Phase Two (Book
+                    Architecture) or Phase Three (Platform Build), though the Blueprint stands alone as a valuable
+                    strategic planning tool.</p>
+                <a href="#" class="phase-one-cta">Apply for Phase One Blueprint &rarr;</a>
+                <p class="phase-one-cta-subtext">Note: Phase One is a prerequisite for all long-term advisory and
+                    book architecture engagements.</p>
+            </div>
+
         </div>
     </section>
 
@@ -3539,7 +3999,8 @@
                 '.hero-headline', '.hero-body', '.hero-tag-line',
                 '.gap-headline', '.gap-subtext',
                 '.audience-heading',
-                '.blueprint-heading', '.blueprint-subtext',
+                '.phase-one-headline', '.phase-one-title', '.phase-one-eyebrow',
+                '.phase-one-block-title', '.phase-one-block-intro',
                 '.book-section-heading', '.book-section-subtext',
                 '.insights-heading',
                 '.mindset-heading',
@@ -3552,7 +4013,7 @@
             // 2. Staggered cards & grid items
             tagElements([
                 '.gap-card', '.audience-card',
-                '.blueprint-step', '.blueprint-connector',
+                '.phase-one-process-item', '.phase-one-deliverable',
                 '.mindset-step', '.mindset-connector',
                 '.insights-card',
                 '.book-card',
@@ -3566,7 +4027,7 @@
 
             // 4. CTA buttons
             tagElements([
-                '.hero-cta', '.blueprint-cta', '.book-cta', '.cta-button', '.insights-cta',
+                '.hero-cta', '.phase-one-cta', '.book-cta', '.cta-button', '.insights-cta',
                 '.btn', '.header-cta'
             ].join(','), 'anim-cta');
 
